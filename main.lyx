@@ -1837,5 +1837,317 @@ Như vậy nếu xét một cách chặt chẽ, kí hiệu
  Nhưng chúng ta thường sử dụng Big-O hơn.
 \end_layout
 
+\begin_layout Section
+Thuật toán xấp xỉ
+\end_layout
+
+\begin_layout Standard
+Thuật toán xấp xỉ là những thuật toán với hiệu năng tốt hơn các thuật toán
+ thông thường, để tìm nghiệm 
+\emph on
+gần đúng
+\emph default
+ cho các bài toán tối ưu.
+ Những thuật toán có một đảm bảo nào đó, chứng minh được, về sai số giữa
+ nghiệm gần tối ưu và nghiệm tối ưu thực sự.
+ Những thuật toán này được thiết kế với phỏng đoán rằng 
+\begin_inset Formula $P\ne NP$
+\end_inset
+
+, i.e.
+\begin_inset space \thinspace{}
+\end_inset
+
+có một số lớp bài toán mà không thể giải được với thời gian đa thức.
+\end_layout
+
+\begin_layout Standard
+Một số cách thiết kế thuật toán xấp xỉ bao gồm:
+\end_layout
+
+\begin_layout Enumerate
+Thuật toán tham lam là dạng thuật toán mà chọn điểm tối ưu địa phương ở
+ mỗi bước.
+ E.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+trong bài toán cái túi, phương pháp tham lam là lấy những vật có giá trị
+ cao và trọng lượng thấp đưa vào trước
+\end_layout
+
+\begin_layout Enumerate
+Tìm kiếm địa phương: lặp qua các phương án từ một phương án ban đầu cho
+ tới khi không tìm được phương án nào tốt hơn.
+\end_layout
+
+\begin_layout Enumerate
+Quy hoạch động: chia bài toán thành những vấn đề nhỏ hơn, và giải một cách
+ đệ quy.
+\end_layout
+
+\begin_layout Enumerate
+Giải bài toán nguyên ở dạng nới lỏng để thu được nghiệm không nguyên, sau
+ đó làm tròn một cách hợp lý.
+\end_layout
+
+\begin_layout Enumerate
+Lấy mẫu ngẫu nhiên hoặc sử dụng tính ngẫu nhiên.
+\end_layout
+
+\begin_layout Standard
+Với những thuật toán tối ưu, chúng ta có thể chứng minh được một vài tính
+ chất về nó.
+ Một thuật toán xấp xỉ được gọi là thuật toán 
+\begin_inset Formula $\rho$
+\end_inset
+
+–xấp xỉ nếu như với một đầu vào 
+\begin_inset Formula $x$
+\end_inset
+
+ thì tỉ lệ 
+\begin_inset Formula $\nicefrac{\text{giá trị}}{\text{chi phí}}$
+\end_inset
+
+ của việc xấp xỉ sẽ bé hơn (hoặc không lớn hơn) 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ Trong đó 
+\begin_inset Formula $\rho$
+\end_inset
+
+ được gọi là 
+\emph on
+giá trị đảm bảo hiệu năng tương đối
+\emph default
+.
+ Ngoài ra ta cũng có 
+\emph on
+giá trị đảm bảo hiệu năng
+\emph default
+ 
+\begin_inset Formula $R\left(x,y\right)$
+\end_inset
+
+, với phương án 
+\begin_inset Formula $y$
+\end_inset
+
+ của đầu vào 
+\begin_inset Formula $x$
+\end_inset
+
+, giá trị 
+\begin_inset Formula $R\left(x,y\right)\ge1$
+\end_inset
+
+, dấu bằng xảy ra khi mà nghiệm xấp xỉ chính là nghiệm tối ưu.
+ Một số bài toán được chứng minh lý thuyết rằng không có thuật toán xấp
+ xỉ 
+\begin_inset Formula $\rho$
+\end_inset
+
+ với một số giá trị nhất định.
+ Ví dụ với bài toán người đi du lịch, nếu ta có một thuật toán xấp xỉ, giá
+ trị 
+\begin_inset Formula $\rho$
+\end_inset
+
+ của nó sẽ nằm trong khoảng 
+\begin_inset Formula $1.008196$
+\end_inset
+
+ và 
+\begin_inset Formula $1.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Không phải thuật toán xấp xỉ nào cũng dùng được trong thực tế.
+ Ngoài những vấn đề như việc cái đặt phức tạp, thuật toán chỉ cải thiện
+ thời gian tính toán trên những đầu vào mà không thực tế, thuật toán khó
+ cài đặt\SpecialChar ldots
+ còn có cả vấn đề về sự chính xác.
+ Đôi lúc nghiệm đưa ra bởi thuật toán xấp xỉ không phù hợp với độ chính
+ xác mà bài toán quyết định yêu cầu trong thực tế.
+ Trong thực tế, những thuật toán xấp xỉ dạng PTAS thường được dùng.
+\end_layout
+
+\begin_layout Section
+Meta Heuristics
+\end_layout
+
+\begin_layout Standard
+Một heuristic là một dạng tìm kiếm để tìm nghiệm gần đúng của bài toán.
+ Ở mỗi bước lặp, một heuristic sẽ cân nhắc giá trị của các lựa chọn để quyết
+ định nên tiến hành theo lựa chọn nào.
+ Các heuristic đánh đổi sự chính xác và đầy đủ cho thời gian chạy.
+ Một meta heuristic là một heuristic bậc cao, có thể tìm, sinh ra, hoặc
+ lựa chọn giữa các heuristic.
+ Meta heuristic có thể được dùng để tìm nghiệm gần đúng, với rất ít giả
+ định và đủ tốt cho các bài toán tối ưu, do đó được sử dụng rộng rãi để
+ giải quyết nhiều bài toán.
+\end_layout
+
+\begin_layout Standard
+Khác với thuật toán xấp xỉ và các thuật toán tìm đúng, heuristic/meta heuristic
+ nói chung không có đảm bảo về mặt lý thuyết.
+ Thậm chí với những meta heuristic sử dụng yếu tố ngẫu nhiên, kết quả sẽ
+ phụ thuộc vào những số ngẫu nhiên được sinh ra trong quá trình giải.
+ Tuy nhiên, vì việc sử dụng meta heuristic đưa ra kết quả khả quan trong
+ nhiều trường hợp, nó vẫn được ứng dụng rộng rãi.
+ 
+\end_layout
+
+\begin_layout Standard
+Một họ meta heuristic rất phổ biến đó là thuật toán di truyền.
+ Để sử dụng thuật toán di truyền, đầu vào của bài toán cần được mã hóa ở
+ dạng nào đó.
+ Sau đó, ta cần định nghĩa một hàm đánh giá chất lượng, một cách để trao
+ đổi chéo, một cách để đột biến.
+ Quá trình chạy thuật toán có thể tổng quát như sau:
+\end_layout
+
+\begin_layout Enumerate
+Chọn và mã hóa một số đầu vào 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+, ta gọi mỗi 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ là một cá thể, và tập các 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ là quần thể.
+\end_layout
+
+\begin_layout Enumerate
+Đánh giá mỗi cá thể sử dụng hàm đánh giá 
+\begin_inset Formula $f$
+\end_inset
+
+, hàm này thường sử dụng hàm mục tiêu của bài toán.
+\end_layout
+
+\begin_layout Enumerate
+Tính độ thích nghi của cá thể 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ vào với công thức
+\begin_inset Formula 
+\[
+\frac{f\left(x_{i}\right)}{\sum_{k=1}^{n}f\left(x_{k}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Chọn một cách ngẫu nhiên hai hay nhiều cá thể giữa các cá thể dựa vào tỉ
+ lệ thích nghi.
+ Tiến hành trao đổi chéo để sinh ra một các thể mới.
+\end_layout
+
+\begin_layout Enumerate
+Chọn ngẫu nhiên một cá thể để đột biến, sinh ra cá thể mới.
+\end_layout
+
+\begin_layout Enumerate
+Thêm các cá thể mới vào trong quần thể, loại bỏ những cá thể 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ mà có 
+\begin_inset Formula $f\left(x_{i}\right)$
+\end_inset
+
+ không cao.
+\end_layout
+
+\begin_layout Enumerate
+Lặp lại từ bước 
+\begin_inset Formula $3$
+\end_inset
+
+ cho tới khi quần thể không đổi qua các bước lặp, hoặc đã qua một số bước
+ lặp nào đó mà không đạt được điều kiện như trên.
+\end_layout
+
+\begin_layout Standard
+Đây chỉ là phiên bản đơn giản nhất của giải thuật di truyền.
+ Tùy vào bài toán, cách cài đặt có thể đưa ra các biến thể, cấu hình khác
+ nhau của thuật toán (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+ta có thể giới hạn cho bước đột biến xảy ra với một số cá thể có ràng buộc
+ nào đó như 
+\begin_inset Formula $f\left(x_{i}\right)$
+\end_inset
+
+ thấp, hoặc cho bước đột biến chỉ xảy ra với một điều kiện nào đó).
+\end_layout
+
+\begin_layout Example
+Áp dụng thuật toán di truyền với bài toán người đi du lịch, ta có thể:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mã hóa đầu vào là một dãy số, thể hiện thứ tự đi qua các thành phố.
+\end_layout
+
+\begin_layout Enumerate
+Hàm đánh giá 
+\begin_inset Formula $f$
+\end_inset
+
+ chính là hàm mục tiêu.
+\end_layout
+
+\begin_layout Enumerate
+Việc trao đổi chéo giữa 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ và 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ được định nghĩa bằng cách dùng 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ như một hoán vị của 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (hoặc ngược lại)
+\end_layout
+
+\begin_layout Enumerate
+Việc đột biến của 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ được định nghĩa bằng cách lấy ra hai số thứ tự trong 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ và đổi thứ tự của chúng cho nhau
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
