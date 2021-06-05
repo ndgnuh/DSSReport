@@ -561,8 +561,79 @@ Sau khi giải bài toán này, chúng ta sẽ thu được số phân xưởng 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
+Tối ưu tổ hợp
+\end_layout
 
+\begin_layout Standard
+Tối ưu tổ hợp là một nhánh của tối ưu.
+ Những bài toán tối ưu tổ hợp nằm dưới dạng: tìm một lời giải tối ưu trong
+ tập hữu hạn những lời giải.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Lời giải
+\begin_inset Quotes erd
+\end_inset
+
+ ở đây được hiểu theo nghĩa rất chung, mỗi bài toán sẽ có một định nghĩa
+ các lời giải riêng.
+ Một số ví dụ về tối ưu tổi hợp là:
+\end_layout
+
+\begin_layout Itemize
+Bài toán người đi du lịch: cho một danh sách các thành phố và khoảng cách
+ của mỗi cặp trong số các thành phố đó; một người muốn đi qua các thành
+ phố này, mỗi thành phố đi một lần và quay lại thành phố ban đầu; vậy người
+ đó nên đi qua các thành phố theo thứ tự nào để đoạn đường đi qua là ngắn
+ nhất? Các lời giải ở đây là thứ tự đi qua mỗi thành phố.
+\end_layout
+
+\begin_layout Itemize
+Bài toán cái túi: một người cần cho một số lượng đồ tư trang vào một túi
+ hành lý, mỗi vật có một trọng lượng nào đó, nên mang đồ vật như thế nào
+ để vừa thỏa mãn sử dụng cá nhân, vừa không quá sức chứa của túi hành lý.
+ Các lời giải ở đây là cách thức người đó xếp đồ vào hành lý (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+xếp những thứ gì, số lượng bao nhiêu).
+\end_layout
+
+\begin_layout Standard
+Mỗi bài toán tổ hợp sẽ có một bài toán phụ đi kèm gọi là 
+\emph on
+bài toán quyết định
+\emph default
+: cho một lời giải 
+\begin_inset Formula $y$
+\end_inset
+
+ của bài toán tổ hợp, hỏi lời giải đó có chấp nhận được không.
+ Thông thường, những bài toán tối ưu tổ hợp có tập lời giải rất lớn, do
+ đó việc lặp qua từng phần tử để đánh giá và lựa chọn hoặc không khả thi,
+ hoặc rất tốn kém và không hiệu quả.
+\end_layout
+
+\begin_layout Standard
+Tối ưu tổ hợp có nhiều ứng dụng trong thực tế.
+ Một dạng bài toán có thể được áp dụng cho nhiều vấn đề khác nhau với cùng
+ dạng đó.
+ Phần này liệt kê một số tối ưu tổ hợp mà hữu dụng trong việc hỗ trợ quyết
+ định.
+\end_layout
+
+\begin_layout Subsection
+Bài toán phân chia công việc
+\end_layout
+
+\begin_layout Subsection
+Bài toán vận tải
+\end_layout
+
+\begin_layout Subsection
+Bài toán cắt vật liệu
 \end_layout
 
 \end_body
