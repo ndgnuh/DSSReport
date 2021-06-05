@@ -1326,6 +1326,518 @@ Những người tham gia đánh giá tầm quan trọng (ưu tiên) của các 
 \end_layout
 
 \begin_layout Section
+Vét cạn
+\end_layout
+
+\begin_layout Standard
+Tìm kiếm vét cạn (complete search) là một phương pháp thông thường để giải
+ hầu hết bất kỳ bài toán tối ưu nào.
+ Ý tưởng là duyệt hết tất cả các lời giải có thể có của bài toán bằng cách
+ sử dụng vét cạn (brute force), và sau đó lựa chọn một giải pháp tốt nhất.
+ Tìm kiếm vét cạn là một kỹ thuật tốt nếu có đủ thời gian để đi qua hết
+ tất cả các lời giải, vì việc tìm kiếm thường dễ để thực thi và nó luôn
+ cho ra lời giải chính xác.
+\end_layout
+
+\begin_layout Subsection
+Sinh tập con
+\end_layout
+
+\begin_layout Standard
+Có 2 phương pháp thông thường để tạo tập hợp con: chúng ta có thể thực hiện
+ một tìm kiếm đệ quy hoặc khai thác cách biểu diễn bit của số nguyên.
+\end_layout
+
+\begin_layout Subsection
+Sinh các hoán vị
+\end_layout
+
+\begin_layout Standard
+2 cách tiếp cận: chúng ta có thể dùng đệ quy hoặc duyệt qua các hoán vị
+ lặp.
+\end_layout
+
+\begin_layout Subsection
+Quay lui
+\end_layout
+
+\begin_layout Standard
+Thuật toán quay lui (backtracking) bắt đầu với một lời giải rỗng và mở rộng
+ lời giải từng bước.
+ Việc tìm kiếm đệ quy duyệt qua các cách khác nhau là cách để xây dựng nên
+ lời giải.
+\end_layout
+
+\begin_layout Example
+xem xét bài toán tính số cách đặt n con hậu lên bàn cờ n x n sao cho không
+ có con cậu nào tấn công lẫn nhau.
+\end_layout
+
+\begin_layout Standard
+Bài toán có thể được giải bằng cách sử dụng quay lui bởi việc đặt con hậu
+ lên bàn cờ theo từng hàng.
+ Chính xác hơn, một con hậu sẽ được đặt lên mỗi hàng sao cho không có con
+ hậu nào tấn công bất kỳ con hậu nào được đặt trước đó.
+ Một lời giải được tìm thấy khi tất cả n quân hậu được đặt trên bàn cờ.
+\end_layout
+
+\begin_layout Subsection
+Tìm kiếm nhánh cận
+\end_layout
+
+\begin_layout Standard
+húng ta thường có thể tối ưu quay lui bằng cách cắt tỉa cây tìm kiếm.
+ Ý tưởng là thêm 1 chút thông minh vào thuật toán để nó nhận ra càng sớm
+ càng tốt nếu một phần lời giải không thể được mở rộng đến lời giải hoàn
+ chỉnh.
+ Việc tối ưu có ảnh hưởng rất lớn đến hiệu quả của việc tìm kiếm.
+\end_layout
+
+\begin_layout Standard
+Chúng ta cùng xem xét bài toán tính số lượng con đường trên một lưới n x
+ n từ góc trên bên trái đến góc dưới bên phải sao cho con đường viến thăm
+ mỗi ô vuông duy nhất 1 lần.
+ Ví dụ, trên lưới 7x7.
+ Chúng ta tập trung vào trường hợp 7x7, bởi vì mức độ khó của nó là phù
+ hợp với nhu cầu của chúng ta.
+ Chúng ta bắt đầu với một thuật toán quay lui đơn giản, và sau đó tối ưu
+ nó từng bước bằng cách sử dụng quan sát, việc tìm kiếm có thể được cắt
+ tỉa.
+\end_layout
+
+\begin_layout Subsubsection
+Thuật toán cơ bản
+\end_layout
+
+\begin_layout Standard
+Phiên bản đầu tiên của thuật toán không chứa bất kỳ tối ưu nào.
+ Đơn giản, chúng ta sử dụng quay lui để tạo ra tất cả các con đường từ góc
+ trên bên trái đến góc dưới bên phải và đếm số lượng các con đường như vậy.
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 1
+\end_layout
+
+\begin_layout Standard
+Trong bất kỳ lời giải nào, ở bước đầu tiên chúng ta di chuyển xuống hoặc
+ qua phải.
+ Luôn có 2 con đường đối xứng qua đường chéo của lưới sau bước đầu tiên.
+ Do đó, chúng ta có thể quyết định rằng chúng ta bước đầu tiên chúng ta
+ luôn di chuyển xuống dưới (hoặc phải), và cuối cùng nhân với 2 thì ra số
+ lượng lời giải.
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 2
+\end_layout
+
+\begin_layout Standard
+Nếu con đường dẫn đến ô dưới cùng bên phải trước khi nó viếng thăm tất cả
+ các ô vuông khác của lưới, thì đó rõ ràng không thể mang lại một lời giải
+ hoàn chỉnh.
+ Sử dụng quan sát này, chúng ta kết thúc việc tìm kiếm ngay lập tức nếu
+ chúng ta tìm đến ô dưới cùng bên phải quá sớm.
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 3
+\end_layout
+
+\begin_layout Standard
+Nếu con đường chạm vào bước tường và chỉ có thể xoay qua bên trái hoặc bên
+ phải thì lưới bị chia thành 2 phần chứa các ô chưa được đi tới.
+ Trong trường hợp này, chúng ta không thể viếng thăm tất cả các ô, vì vậy
+ chúng ta kết thúc việc tìm kiếm.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 4
+\end_layout
+
+\begin_layout Standard
+Ý tưởng ở tối ưu 3 có thể được tổng quát: Nếu con đường không thể tiếp tục
+ tiến tới mà chỉ có thể rẽ trái hoặc phải, thì lưới sẽ bị chia thành 2 phần
+ mà cả hai phần có chứa những ô chưa được viếng thăm.
+ Rõ ràng chúng ta không thể viếng thăm tất cả các ô được, vì thế chúng ta
+ có thể kết thúc sớm việc tìm kiếm.
+\end_layout
+
+\begin_layout Subsection
+Chia để trị
+\end_layout
+
+\begin_layout Standard
+Chia để trị là một kỹ thuật mà không gian tìm kiếm được chia thành 2 phần
+ về kích thước.
+ Một tìm kiếm riêng biệt được thực hiện cho cả 2 phần, và kết quả cuối cùng
+ của việc tìm kiếm được kết hợp lại.
+\end_layout
+
+\begin_layout Standard
+Kỹ thuật này có thể được sử dụng nếu có một cách hiệu quả để kết hợp các
+ kết quả tìm kiếm lại.
+ Trong tình huống này, việc tìm kiếm song song có thể yêu cầu ít thời gian
+ hơn trong một không gian tìm kiếm lớn.
+ Thường, chúng ta có thể chuyển nhân tử 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ thành 
+\begin_inset Formula $2^{n/2}$
+\end_inset
+
+ khi sử dụng kỹ thuật chia để trị.
+\end_layout
+
+\begin_layout Subsection
+Kết luận 
+\end_layout
+
+\begin_layout Standard
+Tìm kiếm vét cạn không phải là một giải pháp tối ưu để giải quyết một bài
+ toán, nhưng nó luôn là 1 cách tiếp cận dễ để cho ta 1 giải pháp ban đầu
+ đúng đắn.
+ Từ lời giải này ta có thể áp dụng các kỹ thuật như tìm kiếm nhánh cận hoặc
+ chia để trị để tối ưu dần.
+\end_layout
+
+\begin_layout Section
+Độ phức tạp
+\end_layout
+
+\begin_layout Standard
+Bài toán quyết định là một trong những đối tượng trọng tâm nghiên cứu của
+ lý thuyết độ phức tạp tính toán.
+ 
+\end_layout
+
+\begin_layout Subsection
+Đánh giá thời gian thực hiện thuật giải:
+\end_layout
+
+\begin_layout Subsubsection
+Tính độc lập:
+\end_layout
+
+\begin_layout Standard
+Thế nào là một thuật giải nhanh.
+ Có thể lập chương trình, chạy máy rồi bấm giờ.
+ Tuy nhiên tốc độ thực hiện một chương trình phụ thuộc vào ngôn ngữ lập
+ trình, chương trình dịch, hệ điều hành, phần cứng của máy… Mặt khác, phải
+ lập trình mới đo được thời gian thực hiện của thuật giải.
+\end_layout
+
+\begin_layout Standard
+Cần đánh giá thời thực hiện sao cho:
+\end_layout
+
+\begin_layout Standard
+- Không phụ thuộc máy, ngôn ngữ lập trình, chương trình biên dịch.
+\end_layout
+
+\begin_layout Standard
+- Không cần phải triển khai chương trình thực hiện thuật giải.
+\end_layout
+
+\begin_layout Standard
+- Chỉ dựa vào bản thân thuật giải.
+\end_layout
+
+\begin_layout Subsubsection
+Các phép toán sơ cấp:
+\end_layout
+
+\begin_layout Standard
+Trước hết ta cần thống nhất những thao tác nào được coi là một phép tính.
+\end_layout
+
+\begin_layout Standard
+Đây là khái niện phép toán sơ cấp.
+ Các phép toán sơ cấp là những phép toán mà thời gian thực hiện nó đủ ngắn,
+ hay nói đúng hơn là không vượt quá một hằng số nào đó.
+ Các phép toán sau đây có thể coi là sơ cấp:
+\end_layout
+
+\begin_layout Standard
+- Các phép tính số học.
+\end_layout
+
+\begin_layout Standard
+- Các phép tính logic.
+\end_layout
+
+\begin_layout Standard
+- Các phép chuyển chỗ, gán…
+\end_layout
+
+\begin_layout Subsubsection
+Kích thước dữ liệu đầu vào:
+\end_layout
+
+\begin_layout Standard
+Cho một thuật giải ta hoàn toàn ước lượng được tổng số các phép toán sơ
+ cấp cần thiết để thực hiện thuật giải đó.
+ Một điều hiển nhiên là tổng số phép toán sơ cấp để giải một bài toán phụ
+ thuộc vào kích thước của bài toán.
+ Dùng cùng một thuật toán, tính một định thức cấp 5 rõ ràng cần ít phép
+ tính hơn định thức cấp 10.
+ Tổng số mục dữ liệu đầu vào là đặc trưng cho kích thước của bài toán.
+ Người ta thường dùng một số nguyên dương 
+\begin_inset Formula $n$
+\end_inset
+
+ để thể hiện kích thước này.
+\end_layout
+
+\begin_layout Standard
+Như vậy, một thuật giải 
+\begin_inset Formula $T$
+\end_inset
+
+ áp dụng để giải bài toán có kích thước n sẽ cần một tổng số 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ các phép toán sơ cấp.
+ 
+\begin_inset Formula $T(n)$
+\end_inset
+
+T(n) là một hàm của tham số 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hàm số 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ là đặc trưng cho hiệu quả của thuật giải 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Tình trạng dữ liệu đầu vào:
+\end_layout
+
+\begin_layout Standard
+Không chỉ có số lượng dữ liệu đầu vào quyết định thời gian thực hiện giải
+ thuật mà tình trạng dữ liệu cũng ảnh hưởng đến việc thuật giải thực hiện
+ nhanh hay chậm.
+ Xét bài toán sắp xếp một dãy số.
+ Rõ ràng là nếu dãy đã có sẵn thứ tự mong muốn hoặc gần thư thế thì công
+ việc phải làm ít hơn trường hợp một dãy bất kỳ.
+\end_layout
+
+\begin_layout Subsection
+Ký hiệu O lớn
+\end_layout
+
+\begin_layout Standard
+Định nghĩa: Giả sử 
+\begin_inset Formula $f(n)$
+\end_inset
+
+, 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ là 2 hàm số không âm, đồng biến theo 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Ta nói “
+\begin_inset Formula $f(n)$
+\end_inset
+
+ là O lớn của 
+\begin_inset Formula $g(n)$
+\end_inset
+
+” và viết: 
+\begin_inset Formula $f(n)=O(g(n))$
+\end_inset
+
+ khi và chỉ khi tồn tại hằng số 
+\begin_inset Formula $C$
+\end_inset
+
+ để 
+\begin_inset Formula $f(n)\leq C.g(n)$
+\end_inset
+
+ kể từ 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+ nào đó.
+\end_layout
+
+\begin_layout Standard
+Ta nói 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ có cấp lớn không vượt quá 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ (dễ hiểu là 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ có tăng tới đâu đi nữa cũng không thể vượt quá tốc độ tăng của 
+\begin_inset Formula $g(n)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Ví dụ: 
+\begin_inset Formula $f(n)=2n^{2}+3n+5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(n)\leq2n^{2}+3n^{2}+5n^{2}=12n^{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall n\ge1$
+\end_inset
+
+.
+ Ta viết 
+\begin_inset Formula $f(n)=O(n2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Viết 
+\begin_inset Formula $T(n)=O(g(n))$
+\end_inset
+
+ nghĩa là tốc độ tăng của 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ khi tiến đến vô cùng không vượt quá tốc độ tăng của 
+\begin_inset Formula $g(n)$
+\end_inset
+
+.
+ Khi 
+\begin_inset Formula $n$
+\end_inset
+
+ lớn, 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ cho ta hình dung được mức lớn của 
+\begin_inset Formula $T(n).g(n)$
+\end_inset
+
+ là “thước đo” độ lớn của 
+\begin_inset Formula $T(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ký hiệu 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ lớn và 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ lớn
+\end_layout
+
+\begin_layout Standard
+Tương tự như với bậc big-O, nếu như tìm được các hằng số 
+\begin_inset Formula $C,k1,k2$
+\end_inset
+
+ đều dương và không phụ thuộc vào 
+\begin_inset Formula $n$
+\end_inset
+
+, sao cho với 
+\begin_inset Formula $n$
+\end_inset
+
+ đủ lớn, các hàm 
+\begin_inset Formula $R(n),f(n)$
+\end_inset
+
+ và 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ đều dương và
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R(n)\geq C\cdot f(n)
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+k_{1}\cdot h(n)\leq R(n)\leq k_{2}\cdot h(n)
+\]
+
+\end_inset
+
+ thì ta nói thuật toán có độ phức tạp cỡ lớn hơn 
+\begin_inset Formula $\Omega(n)$
+\end_inset
+
+, và đúng bằng cỡ 
+\begin_inset Formula $\Theta(h(n))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Như vậy nếu xét một cách chặt chẽ, kí hiệu 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ mới biểu thị độ phức tạp của thuật toán một cách chặt chẽ.
+ Do đó 2 ký hiệu thường được sử dụng trong đánh giá độ phức tạp của thuật
+ toán là Big-O và Big-
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ Nhưng chúng ta thường sử dụng Big-O hơn.
+\end_layout
+
+\begin_layout Section
 Thuật toán xấp xỉ
 \end_layout
 
