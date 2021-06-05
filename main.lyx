@@ -106,5 +106,267 @@ Hệ hỗ trợ quyết định
 Nguyễn Đức Hùng, Nguyễn Đức Vượng
 \end_layout
 
+\begin_layout Chapter
+Quy hoạch toán học
+\end_layout
+
+\begin_layout Standard
+Quy hoạch toán học là một họ công cụ được thiết kế để giúp giải quyết các
+ vấn đề quản lý, trong đó người ra quyết định phải phân bổ các nguồn lực
+ khan hiếm giữa các hoạt động để tối ưu hóa một mục tiêu có thể đo lường
+ được.
+ 
+\end_layout
+
+\begin_layout Standard
+Ví dụ, phân phối thời gian máy (tài nguyên) giữa các sản phẩm khác nhau
+ (các hoạt động) là một vấn đề phân bổ điển hình.
+ Các vấn đề phân bổ Quy hoạch tuyến tính (QHTT) thường có các đặc điểm sau:
+ 
+\end_layout
+
+\begin_layout Itemize
+Có thể phân bổ một lượng hạn chế các nguồn lực kinh tế.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các nguồn lực được sử dụng để sản xuất các sản phẩm hoặc dịch vụ.
+ 
+\end_layout
+
+\begin_layout Itemize
+Có hai hoặc nhiều cách để sử dụng các nguồn lực.
+ Mỗi cái được gọi là giải pháp hoặc một chương trình.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mỗi hoạt động (sản xuất hoặc dịch vụ) trong đó các nguồn lực được sử dụng
+ mang lại lợi nhuận dựa trên mục tiêu đã nêu.
+ 
+\end_layout
+
+\begin_layout Itemize
+Việc phân bổ thường bị hạn chế bởi một số giới hạn và yêu cầu, được gọi
+ là những ràng buộc.
+\end_layout
+
+\begin_layout Standard
+Mô hình phân bổ QHTT dựa trên các giả định kinh tế sau:
+\end_layout
+
+\begin_layout Itemize
+Có thể so sánh lợi nhuận từ các lần phân bổ khác nhau; nghĩa là chúng có
+ thể được đo lường bằng một đơn vị chung (ví dụ: đô la, tiện ích).
+ 
+\end_layout
+
+\begin_layout Itemize
+Lợi nhuận từ bất kỳ phân bổ nào là độc lập với các phân bổ khác.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tổng lợi nhuận là tổng lợi nhuận thu được từ các hoạt động khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tất cả dữ liệu được nắm biết một cách chắc chắn.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các nguồn lực phải được sử dụng một cách tiết kiệm nhất.
+ 
+\end_layout
+
+\begin_layout Standard
+Các vấn đề về phân bổ thường có một số lượng lớn các giải pháp khả thi.
+ Dựa trên các giả thiết cơ bản, số lượng nghiệm có thể là vô hạn hoặc hữu
+ hạn.
+ Thông thường, các giải pháp khác nhau mang lại phần thưởng khác nhau.
+ Trong số các giải pháp hiện có, ít nhất một giải pháp là tốt nhất, theo
+ nghĩa là mức độ đạt được mục tiêu đi kèm với nó là cao nhất (tức là tổng
+ phần thưởng được tối đa hóa).
+ Đây được gọi là một giải pháp tối ưu và nó có thể được tìm thấy bằng cách
+ sử dụng một thuật toán đặc biệt.
+\end_layout
+
+\begin_layout Section
+Quy hoạch tuyến tính
+\end_layout
+
+\begin_layout Standard
+Quy hoạch tuyến tính (QHTT) là công cụ nổi tiếng nhất trong họ các công
+ cụ tối ưu hóa được gọi là quy hoạch toán học.
+ Trong QHTT, tất cả các mối quan hệ giữa các biến là tuyến tính.
+ Trong lĩnh vực kinh doanh và quản lý, những người ra quyết định thường
+ phải đối mặt với vấn đề phân bổ nguồn lực hạn chế giữa các nhu cầu cạnh
+ tranh để tối đa hóa sản lượng, doanh thu, mức độ dịch vụ, v.v.
+ hoặc để giảm thiểu chi phí.
+ Ví dụ, trong lập kế hoạch sản xuất, phối trộn nguyên liệu, quản lý danh
+ mục đầu tư và lập kế hoạch cho nhân viên.
+ QHTT cung cấp một công cụ hỗ trợ quyết định, toàn diện để tính toán một
+ giải pháp tổng thể tốt nhất hoặc tối ưu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Xét một ví dụ thực tế như sau:
+\end_layout
+
+\begin_layout Standard
+Unimow sản xuất hai loại động cơ máy cắt cỏ James và Roker.
+ Năng lực lao động, phay và tiện là những chỉ những ràng buộc về sản xuất.
+ Để sản xuất mỗi James cần sử dụng ba giờ lao động, ba giờ phay và hai giờ
+ tiện, mỗi Roker sử dụng hai giờ lao động, một giờ phay và bốn giờ tiện.
+ James đóng góp cho đơn vị (trước khi phân bổ tổng chi phí cố định) là £
+ 22, Roker là £ 20.
+ Trong một tháng bất kỳ, có 120.000 giờ nhân công có sẵn, thời gian phay
+ 120.000 giờ và công suất tiện 150.000 giờ.
+ Làm sao công ty có thể tối đa hóa lợi nhuận?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trước tiên, cần mô hình hóa bài toán về dạng đại số, quá trình này gồm 4
+ bước
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 1: Xác định vấn đề.
+ 
+\series default
+Ở đây, vẫn đề cần giải quyết là tối đa hóa lợi nhuận.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 2: Xác định các biến.
+
+\series default
+ Ở bước này, những người ra quyết định cần phải quyết định có những biến
+ nào và ảnh hưởng như nào đến giải pháp.
+ Trong ví dụ này chỉ có hai biến, số lượng James sản xuất và tương ứng số
+ lượng Roker được sản xuất mỗi tháng, gọi là 
+\begin_inset Formula $J$
+\end_inset
+
+ và 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 3: Hình thành hàm mục tiêu.
+
+\series default
+ Hàm mục tiêu là một phương trình biểu thị cách thức mà các biến quyết định
+ ảnh hưởng đến giải pháp và thường được kết hợp với các từ tối đa hóa hoặc
+ tối thiểu hóa.
+ Hàm mục tiêu trong ví dụ này là 
+\begin_inset Formula 
+\[
+\max\,\,22J+20R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 4: Xác định các ràng buộc.
+ 
+\series default
+Giai đoạn cuối cùng là xác định tất cả các ràng buộc trong điều kiện về
+ số lượng có thể được sản xuất.
+ Trong ví
+\series bold
+ 
+\series default
+dụ này,
+\series bold
+
+\begin_inset Formula 
+\begin{align*}
+\text{lao động\,\,\,\,\,}3J+2R & \le120\\
+\text{phay\,\,\,\,\,\,\,\,}3J+1.5R & \le120\\
+\text{tiện\,\,\,\,\,\,\,\,\,\,\,\,}2J+4R & \le150\\
+J,R\ge0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Có bốn phương pháp để giải quyết vấn đề: 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Mô hình "What if?"
+\series default
+, sử dụng phần mềm Microsoft Excel Solver.
+ Mô hình này có thể rất mạnh mẽ và đơn giản để xây dựng nhưng dựa vào quyết
+ định nhà sản xuất để đi đến câu trả lời chính xác.
+ Bản thân mô hình không mang tính quy định trong việc cung cấp câu trả lời
+ tốt nhất nhưng cho phép nhà quyết định xác định chiến lược nào là khả thi.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Phương pháp hình học
+\series default
+ sử dụng đồ thị, nhưng phương pháp này chỉ có thể được sử dụng để giải quyết
+ các bài toán đơn giản chỉ với hai biến và hạn chế số lượng ràng buộc.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Thuật toán Đơn hình
+\series default
+ hoặc một trong những biến thể của nó, một công cụ mạnh mẽ, nhưng một đòi
+ hỏi một khối lượng lớn các phép tính.
+ Bất kỳ số lượng biến nào có thể là đã xử lý nhưng số lượng phép tính nhanh
+ chóng trở nên không thể thực hiện được.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sử dụng các gói phần mềm chuyên dụng, thường không thân thiện với người
+ dùng, tốn kém và khó diễn giải.
+ Nhưng sẽ không giới hạn về số lượng các biến có thể được xử lý.
+\end_layout
+
 \end_body
 \end_document
