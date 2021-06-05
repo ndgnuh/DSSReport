@@ -554,26 +554,15 @@ Sau khi giải bài toán này, chúng ta sẽ thu được số phân xưởng 
 \end_layout
 
 \end_deeper
-\begin_layout Subsection
-Giải bằng phương pháp hình học (vẽ hình)
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Một phương pháp đơn giản để giải quy hoạch tuyến tính là phương pháp hình
- học.
- Giống như với trường hợp tuyến tính, phương pháp hình học áp dụng cho những
- quy hoạch với hai biến trở xuống.
- Xét bài toán 
-\begin_inset CommandInset ref
-LatexCommand formatted
-reference "eg:ip-01"
-plural "false"
-caps "false"
-noprefix "false"
 
-\end_inset
-
-.
 \end_layout
 
 \end_body
