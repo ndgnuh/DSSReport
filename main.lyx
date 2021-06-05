@@ -773,5 +773,66 @@ trong đó
  là tập nghiệm của bài toán quy hoạch đa mục tiêu (MOP).
 \end_layout
 
+\begin_layout Standard
+Ví dụ, hãy xem xét một công ty tạo ra lợi nhuận.
+ Ngoài việc kiếm tiền, công ty muốn tăng trưởng, phát triển sản phẩm và
+ nhân viên của mình, đảm bảo việc làm cho người lao động và phục vụ cộng
+ đồng.
+ Các nhà quản lý muốn làm hài lòng các cổ đông, đồng thời được hưởng mức
+ lương và tài khoản chi phí cao, và nhân viên muốn tăng lương và phúc lợi
+ của họ.
+ Khi phải đưa ra một quyết định - ví dụ, về một dự án đầu tư - một số mục
+ tiêu này bổ sung cho nhau, trong khi những mục tiêu khác thì khác.
+ Kearns đã mô tả cách thức quy trình phân cấp phân tích (AHP), kết hợp với
+ quy hoạch nguyên để giải quyết nhiều mục tiêu trong việc đánh giá đầu tư
+ trong lĩnh vực IT.
+\end_layout
+
+\begin_layout Standard
+Trong thực tế sẽ tồn tại những khó khăn nhất định có thể phát sinh khi tối
+ ưu nhiều mục tiêu: 
+\end_layout
+
+\begin_layout Itemize
+Thông thường rất khó để có được một mô hình rõ ràng về các mục tiêu của
+ tổ chức.
+ 
+\end_layout
+
+\begin_layout Itemize
+Người ra quyết định có thể thay đổi tầm quan trọng được giao cho các mục
+ tiêu cụ thể theo thời gian hoặc cho các tình huống quyết định khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các mục tiêu chính và mục tiêu phụ được nhìn nhận khác nhau ở các cấp độ
+ khác nhau của tổ chức và trong các phòng ban khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các mục tiêu thay đổi để đáp ứng với những thay đổi trong tổ chức và môi
+ trường của nó.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mối quan hệ giữa các lựa chọn thay thế và vai trò của chúng trong việc xác
+ định mục tiêu có thể khó định lượng.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các vấn đề phức tạp được giải quyết bởi các nhóm người ra quyết định, mỗi
+ người trong số họ có một hướng giải quyết khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Những người tham gia đánh giá tầm quan trọng (ưu tiên) của các mục tiêu
+ khác nhau một cách khác nhau.
+\end_layout
+
 \end_body
 \end_document
