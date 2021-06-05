@@ -106,5 +106,107 @@ Hệ hỗ trợ quyết định
 Nguyễn Đức Hùng
 \end_layout
 
+\begin_layout Section
+Quy hoạch nguyên
+\end_layout
+
+\begin_layout Standard
+Một quy hoạch tuyến tính nguyên là một bài toán quy hoạch tuyến tính mà
+ trong đó một phần hay toàn bộ các biến số mục tiêu có điều kiện nguyên.
+ Trong nhiều trường hợp, quy hoạch tuyến tính nguyên được nói tắt là quy
+ hoạch nguyên.
+ Bài toán quy hoạch nguyên với toàn bộ các biến mục tiêu là nguyên được
+ gọi là bài toán quy hoạch nguyên hoàn toàn, ngược lại thì được gọi là bài
+ toán quy hoạch nguyên bộ phận.
+\end_layout
+
+\begin_layout Standard
+Một mô hình quy hoạch nguyên có dạng
+\begin_inset Formula 
+\[
+\begin{array}{crcrcccrcl}
+\min & c_{1}x_{1} & + & c_{2}x_{2} & + & \cdots & + & c_{n}x_{n}\\
+ & a_{1,1}x_{1} & + & a_{1,2}x_{2} & + & \cdots & + & a_{1,n}x_{n} & \le & b_{1}\\
+ & \vdots &  & \vdots &  & \ddots &  & \vdots &  & \vdots\\
+ & a_{m,1}x_{1} & + & a_{m,2}x_{2} & + & \cdots & + & a_{m,n}x_{n} & \le & b_{m}\\
+ &  &  &  &  &  &  & \mathllap{x_{1},x_{2},\ldots,x_{n}} & \in & \mathbb{Z}_{+}
+\end{array}
+\]
+
+\end_inset
+
+Ở đây ta chỉ xét bài toán 
+\begin_inset Formula $\min$
+\end_inset
+
+, quy ước 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{m}\ge0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+TODO: dẫn dắt về tác dụng trong DSS
+\end_layout
+
+\begin_layout Subsection
+Mô hình hóa
+\end_layout
+
+\begin_layout Standard
+Trong việc hỗ trợ đưa ra quyết định, bài toán quy hoạch nguyên thường được
+ dùng trong việc phân chia tài nguyên vào các công việc khác nhau.
+ Trong đó các biến 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ là các biến quyết định, các bất phương trình 
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a_{i,1}x_{1}+a_{i,2}x_{2}+\cdots+a_{i,n}x_{n}\le b_{i}
+\]
+
+\end_inset
+
+là các ràng buộc thể hiện những điều kiện thực tế không điều khiển được
+ như công nghệ, tài chính, nhân lực, etc.
+\end_layout
+
+\begin_layout Example
+Một công ty ở có dự định xây thêm một vài phân xưởng mới ở hai thành phố
+ A và B để gia tăng sản xuất.
+ Ước tính mỗi xưởng ở thành phố A sẽ đem lại lợi nhuận 7
+\begin_inset space \thinspace{}
+\end_inset
+
+000 USD mỗi ngày, ở thành phố B là 6
+\begin_inset space \thinspace{}
+\end_inset
+
+000 USD.
+\end_layout
+
+\begin_layout Subsection
+Điều kiện tồn tại nghiệm
+\end_layout
+
+\begin_layout Subsection
+Giải bằng phương pháp hình học (vẽ hình)
+\end_layout
+
+\begin_layout Standard
+Một phương pháp đơn giản để giải quy hoạch tuyến tính là phương pháp hình
+ học.
+ Giống như với trường hợp tuyến tính, phương pháp hình học áp dụng cho những
+ quy hoạch với hai biến trở xuống.
+ Xét bài toán ví dụ sau:
+\end_layout
+
 \end_body
 \end_document
