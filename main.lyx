@@ -135,20 +135,11 @@ Một mô hình quy hoạch nguyên có dạng
 
 \end_inset
 
-Ở đây ta chỉ xét bài toán 
-\begin_inset Formula $\min$
+Trong đó, các số 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{m}$
 \end_inset
 
-, quy ước 
-\begin_inset Formula $b_{1},b_{2},\ldots,b_{m}\ge0$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-TODO: dẫn dắt về tác dụng trong DSS
+ là các số không âm.
 \end_layout
 
 \begin_layout Subsection
@@ -176,26 +167,131 @@ a_{i,1}x_{1}+a_{i,2}x_{2}+\cdots+a_{i,n}x_{n}\le b_{i}
 
 là các ràng buộc thể hiện những điều kiện thực tế không điều khiển được
  như công nghệ, tài chính, nhân lực, etc.
+ Một cách lý thuyết, những bài toán quy hoạch nguyên dưới dạng này luôn
+ có nghiệm.
 \end_layout
 
 \begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "eg:ip-01"
+
+\end_inset
+
 Một công ty ở có dự định xây thêm một vài phân xưởng mới ở hai thành phố
  A và B để gia tăng sản xuất.
- Ước tính mỗi xưởng ở thành phố A sẽ đem lại lợi nhuận 7
+ Ước tính mỗi xưởng ở thành phố A sẽ đem lại lợi nhuận 70
 \begin_inset space \thinspace{}
 \end_inset
 
-000 USD mỗi ngày, ở thành phố B là 6
+000VNĐ mỗi ngày, ở thành phố B là 60
 \begin_inset space \thinspace{}
 \end_inset
 
-000 USD.
+000VNĐ mỗi ngày.
+ Xây dựng một xưởng ở thành phố A sẽ tốn 60
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000 VNĐ và ở thành phố B sẽ tốn 50
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ.
+ Tổng số tiền cho xây dựng thêm là 300
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ.
+ Vậy ở mỗi thành phố nên xây dựng thêm bao nhiêu phân xưởng?
 \end_layout
 
-\begin_layout Subsection
-Điều kiện tồn tại nghiệm
+\begin_deeper
+\begin_layout Standard
+Các biến quyết định ở đây là số xưởng cần xây, do đó đặt số xưởng sẽ xây
+ dựng ở thành phố A là 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, ở thành phố B là 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ Quy đơn vị tiền mặt sang nghìn VNĐ.
+ Số tiền lợi nhuận cho một ngày sẽ là 
+\begin_inset Formula 
+\[
+70x_{1}+60x_{2}.
+\]
+
+\end_inset
+
+Ta mong muốn lợi nhuận càng cao càng tốt, do đó 
+\begin_inset Formula $\max70x_{1}+60x_{2}$
+\end_inset
+
+ sẽ là hàm mục tiêu của chúng ta.
+ Với điều kiện chi phí xây dựng ở mỗi thành phố và tổng số tiền, ta có ràng
+ buộc:
+\begin_inset Formula 
+\[
+60\,000x_{1}+50\,000x_{2}\le300\thinspace000.
+\]
+
+\end_inset
+
+Điều kiện này có thể rút gọn lại là:
+\begin_inset Formula 
+\[
+6x_{1}+5x_{2}\le30.
+\]
+
+\end_inset
+
+Trong đó theo lẽ thường, các số xưởng được xây–các biến 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ và 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ phải là số nguyên, ta có thêm ràng buộc 
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+ nguyên.
+ Vậy quy hoạch nguyên mô hình hóa bài toán này là:
+\begin_inset Formula 
+\[
+\begin{array}{crcrll}
+\max & 70x_{1} & + & 60x_{2}\\
+ & 6x_{1} & + & 5x_{2} & \le & 30\\
+ &  &  & \mathllap{x_{1},x_{2}} & \mathrlap{\text{nguyên}}
+\end{array}.
+\]
+
+\end_inset
+
+Sau khi giải bài toán này, chúng ta sẽ thu được số phân xưởng cần xây dựng
+ để sinh lời lớn nhất, thỏa mãn với những ràng buộc về điều kiện tài chính
+ hiện tại.
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 Giải bằng phương pháp hình học (vẽ hình)
 \end_layout
@@ -205,7 +301,17 @@ Một phương pháp đơn giản để giải quy hoạch tuyến tính là ph�
  học.
  Giống như với trường hợp tuyến tính, phương pháp hình học áp dụng cho những
  quy hoạch với hai biến trở xuống.
- Xét bài toán ví dụ sau:
+ Xét bài toán 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eg:ip-01"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
