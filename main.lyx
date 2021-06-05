@@ -368,5 +368,410 @@ Sử dụng các gói phần mềm chuyên dụng, thường không thân thiệ
  Nhưng sẽ không giới hạn về số lượng các biến có thể được xử lý.
 \end_layout
 
+\begin_layout Section
+Quy hoạch nguyên
+\end_layout
+
+\begin_layout Standard
+Một quy hoạch tuyến tính nguyên là một bài toán quy hoạch tuyến tính mà
+ trong đó một phần hay toàn bộ các biến số mục tiêu có điều kiện nguyên.
+ Trong nhiều trường hợp, quy hoạch tuyến tính nguyên được nói tắt là quy
+ hoạch nguyên.
+ Bài toán quy hoạch nguyên với toàn bộ các biến mục tiêu là nguyên được
+ gọi là bài toán quy hoạch nguyên hoàn toàn, ngược lại thì được gọi là bài
+ toán quy hoạch nguyên bộ phận.
+\end_layout
+
+\begin_layout Standard
+Một mô hình quy hoạch nguyên có dạng
+\begin_inset Formula 
+\[
+\begin{array}{crcrcccrcl}
+\min & c_{1}x_{1} & + & c_{2}x_{2} & + & \cdots & + & c_{n}x_{n}\\
+ & a_{1,1}x_{1} & + & a_{1,2}x_{2} & + & \cdots & + & a_{1,n}x_{n} & \le & b_{1}\\
+ & \vdots &  & \vdots &  & \ddots &  & \vdots &  & \vdots\\
+ & a_{m,1}x_{1} & + & a_{m,2}x_{2} & + & \cdots & + & a_{m,n}x_{n} & \le & b_{m}\\
+ &  &  &  &  &  &  & \mathllap{x_{1},x_{2},\ldots,x_{n}} & \in & \mathbb{Z}_{+}
+\end{array}
+\]
+
+\end_inset
+
+Trong đó, các số 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{m}$
+\end_inset
+
+ là các số không âm.
+\end_layout
+
+\begin_layout Subsection
+Mô hình hóa
+\end_layout
+
+\begin_layout Standard
+Trong việc hỗ trợ đưa ra quyết định, bài toán quy hoạch nguyên thường được
+ dùng trong việc phân chia tài nguyên vào các công việc khác nhau.
+ Trong đó các biến 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ là các biến quyết định, các bất phương trình 
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a_{i,1}x_{1}+a_{i,2}x_{2}+\cdots+a_{i,n}x_{n}\le b_{i}
+\]
+
+\end_inset
+
+là các ràng buộc thể hiện những điều kiện thực tế không điều khiển được
+ như công nghệ, tài chính, nhân lực, etc.
+ Một cách lý thuyết, những bài toán quy hoạch nguyên dưới dạng này luôn
+ có nghiệm.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "eg:ip-01"
+
+\end_inset
+
+Một công ty ở có dự định xây thêm một vài phân xưởng mới ở hai thành phố
+ A và B để gia tăng sản xuất.
+ Ước tính mỗi xưởng ở thành phố A sẽ đem lại lợi nhuận 70
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ mỗi ngày, ở thành phố B là 60
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ mỗi ngày.
+ Xây dựng một xưởng ở thành phố A sẽ tốn 60
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000 VNĐ và ở thành phố B sẽ tốn 50
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ.
+ Tổng số tiền cho xây dựng thêm là 300
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ.
+ Vậy ở mỗi thành phố nên xây dựng thêm bao nhiêu phân xưởng?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Các biến quyết định ở đây là số xưởng cần xây, do đó đặt số xưởng sẽ xây
+ dựng ở thành phố A là 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, ở thành phố B là 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ Quy đơn vị tiền mặt sang nghìn VNĐ.
+ Số tiền lợi nhuận cho một ngày sẽ là 
+\begin_inset Formula 
+\[
+70x_{1}+60x_{2}.
+\]
+
+\end_inset
+
+Ta mong muốn lợi nhuận càng cao càng tốt, do đó 
+\begin_inset Formula $\max70x_{1}+60x_{2}$
+\end_inset
+
+ sẽ là hàm mục tiêu của chúng ta.
+ Với điều kiện chi phí xây dựng ở mỗi thành phố và tổng số tiền, ta có ràng
+ buộc:
+\begin_inset Formula 
+\[
+60\,000x_{1}+50\,000x_{2}\le300\thinspace000.
+\]
+
+\end_inset
+
+Điều kiện này có thể rút gọn lại là:
+\begin_inset Formula 
+\[
+6x_{1}+5x_{2}\le30.
+\]
+
+\end_inset
+
+Trong đó theo lẽ thường, các số xưởng được xây–các biến 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ và 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ phải là số nguyên, ta có thêm ràng buộc 
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+ nguyên.
+ Vậy quy hoạch nguyên mô hình hóa bài toán này là:
+\begin_inset Formula 
+\[
+\begin{array}{crcrll}
+\max & 70x_{1} & + & 60x_{2}\\
+ & 6x_{1} & + & 5x_{2} & \le & 30\\
+ &  &  & \mathllap{x_{1},x_{2}} & \mathrlap{\text{nguyên}}
+\end{array}.
+\]
+
+\end_inset
+
+Sau khi giải bài toán này, chúng ta sẽ thu được số phân xưởng cần xây dựng
+ để sinh lời lớn nhất, thỏa mãn với những ràng buộc về điều kiện tài chính
+ hiện tại.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Giải bằng phương pháp hình học (vẽ hình)
+\end_layout
+
+\begin_layout Standard
+Một phương pháp đơn giản để giải quy hoạch tuyến tính là phương pháp hình
+ học.
+ Giống như với trường hợp tuyến tính, phương pháp hình học áp dụng cho những
+ quy hoạch với hai biến trở xuống.
+ Xét bài toán 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eg:ip-01"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Tối ưu đa mục tiêu
+\end_layout
+
+\begin_layout Standard
+Tối ưu đa mục tiêu (MOP) là quy trình để tối ưu hóa hai hoặc nhiều mục tiêu
+ đồng thời với một số ràng buộc nhất định.
+ Về mặt toán học, bài toán MOO là bài toán tìm một vectơ của các biến quyết
+ định thỏa mãn một số ràng buộc và tối ưu hóa một hàm vectơ có các phần
+ tử đại diện cho các hàm mục tiêu được cực tiểu hoặc cực đại đồng thời.
+ Mô hình bài toán: tìm vector biến 
+\begin_inset Formula 
+\[
+x=(x_{1},\ldots,x_{n})\in\mathbb{R}^{n}
+\]
+
+\end_inset
+
+sao cho tối đa/tối thiểu hàm mục tiêu
+\begin_inset Formula 
+\[
+f(x)=(f_{1}(x),\ldots,f_{m}(x))^{T}
+\]
+
+\end_inset
+
+thỏa mãn
+\begin_inset Formula 
+\[
+x_{i}^{lb}\leq x_{i}\leq x_{i}^{ub},\,i=1,\ldots,n
+\]
+
+\end_inset
+
+
+\begin_inset Formula $J$
+\end_inset
+
+ ràng buộc dấu
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{j}(x)\leq0,\,j=1,\ldots,J
+\]
+
+\end_inset
+
+
+\begin_inset Formula $K$
+\end_inset
+
+ ràng buộc đẳng thức
+\begin_inset Formula 
+\[
+h_{k}(x)=0,\,k=1,\ldots,K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Giải một bài toán MOP là tìm ra một tập nghiệm được gọi là tập Pareto.
+ Sau đó, chọn một nghiệm từ tập Pareto.
+ Không giống như một bài toán tối ưu hóa một mục tiêu, việc giải quyết một
+ bài toán MOP bao gồm ba bước quan trọng và hoàn toàn khác nhau: 
+\end_layout
+
+\begin_layout Enumerate
+Hình thành một mô hình toán học; 
+\end_layout
+
+\begin_layout Enumerate
+Tối ưu hóa;
+\end_layout
+
+\begin_layout Enumerate
+Ra quyết định.
+ 
+\end_layout
+
+\begin_layout Standard
+Trong bước tối ưu hóa, tập Pareto được xác định; Tuy nhiên, trong bước ra
+ quyết định, nghiệm tốt nhất được chọn từ tập Pareto dựa trên nhu cầu của
+ người ra quyết định.
+\end_layout
+
+\begin_layout Standard
+Theo tiếp cận trên không gian quyết định (decision space), việc giải bài
+ toán (MOP) được xem như việc xác định toàn bộ hay một phần của tập nghiệm
+ hữu hiệu 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ hoặc tập nghiệm hữu hiệu yếu 
+\begin_inset Formula $X_{WE}$
+\end_inset
+
+.
+ Đây là một việc khó, vì ngay cả trong trường hợp đơn giản nhất của (MOP)
+ là bài toán quy hoạch đa mục tiêu tuyến tính (LMOP), tập nghiệm hữu hiệu
+ 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ và tập nghiệm hữu hiệu yếu 
+\begin_inset Formula $X_{WE}$
+\end_inset
+
+ đã là các tập không lồi với cấu trúc rất phức tạp.
+ 
+\end_layout
+
+\begin_layout Standard
+Với hy vọng giảm khối lượng tính toán, các thuật toán theo hướng tiếp cận
+ trên không gian ảnh hay không gian giá trị (outcome space) được thiết kế
+ để xác định toàn bộ hay một phần của tập ảnh hữu hiệu 
+\begin_inset Formula $Y_{E}=f(X_{E})$
+\end_inset
+
+ hoặc tập ảnh hữu hiệu yếu 
+\begin_inset Formula $Y_{WE}=f(X_{WE})$
+\end_inset
+
+.
+ Lý do chính cho hướng tiếp cận này là: i) Các bài toán tối ưu đa mục tiêu
+ nảy sinh trong thực tế thường có số hàm mục tiêu 
+\begin_inset Formula $p$
+\end_inset
+
+ nhỏ hơn rất nhiều so với số biến 
+\begin_inset Formula $n$
+\end_inset
+
+; ii) Tập ảnh hữu hiệu 
+\begin_inset Formula $Y_{E}$
+\end_inset
+
+ có cấu trúc đơn giản hơn 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+; iii) Trong quá trình đưa ra quyết định, người ta thường lựa chọn phương
+ án dựa trên giá trị hữu hiệu hơn là dựa trên nghiệm hữu hiệu.
+\end_layout
+
+\begin_layout Standard
+Trong tối ưu đa mục tiêu, việc nghiên cứu để giải bài toán quy hoạch đa
+ mục tiêu tuyến tính (LMOP) có thể xem gần như hoàn chỉnh.
+ Rất nhiều thuật toán đã được đề xuất theo cả hai hướng tiếp cận trên không
+ gian quyết định và không gian ảnh để giải bài toán này bằng nhiều phương
+ pháp khác nhau như phương pháp đơn hình đa mục tiêu, phương pháp tham số,
+ phương pháp vô hướng hóa, phương pháp nón pháp tuyến, phương pháp xấp xỉ
+ ngoài hoặc kết hợp của các phương pháp đó.
+ Với bài toán quy hoạch đa mục tiêu lồi và không lồi, đã có một số thuật
+ toán được đề xuất.
+ Hầu hết các thuật toán theo tiếp cận trên không gian quyết định được thiết
+ kế dựa trên các phương pháp trọng số, phương pháp 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+−ràng buộc, phương pháp hàm lợi ích, phương pháp lexicographic, phương pháp
+ Tchebycheff,...
+ để sinh một phần tập nghiệm hữu hiệu hay hữu hiệu yếu của bài toán.
+ Theo tiếp cận trên không gian ảnh, các thuật toán thường sử dụng kỹ thuật
+ xấp xỉ ngoài để xây dựng một dãy các tập xấp xỉ tập ảnh, trong đó ta có
+ thể dễ dàng xác định được tập hữu hiệu các tập xấp xỉ này.
+ Với cách tiếp cận này, một mặt, thuật toán sinh ra một phần của tập ảnh
+ hữu hiệu của bài toán, mặt khác, nó sinh ra tập xấp xỉ của tập ảnh hữu
+ hiệu chứa toàn bộ tập ảnh hữu hiệu.
+\end_layout
+
+\begin_layout Standard
+Khi đã tìm được tập nghiệm Pareto, việc xác định một nghiệm tối ưu dựa trên
+ các yêu cầu chủ quan của DM cũng vô cùng quan trọng.
+ Đó gọi là bài toán tối ưu trên tập nghiệm hữu hiệu, có mô hình như sau:
+\begin_inset Formula 
+\[
+\min\,\,h(x)\,\,\text{v.đ.k\,\,x\ensuremath{\in X_{E}}}
+\]
+
+\end_inset
+
+trong đó 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ là một hàm số thực xác định và 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ là tập nghiệm của bài toán quy hoạch đa mục tiêu (MOP).
+\end_layout
+
 \end_body
 \end_document
