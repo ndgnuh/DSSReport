@@ -694,5 +694,263 @@ Nhà sản xuất có các thanh vật liệu dài
  Vấn đề đặt ra là cần một cách cắt sao cho tổng số vật liệu là nhỏ nhất
 \end_layout
 
+\begin_layout Section
+Tối ưu đa mục tiêu
+\end_layout
+
+\begin_layout Standard
+Tối ưu đa mục tiêu (MOP) là quy trình để tối ưu hóa hai hoặc nhiều mục tiêu
+ đồng thời với một số ràng buộc nhất định.
+ Về mặt toán học, bài toán MOO là bài toán tìm một vectơ của các biến quyết
+ định thỏa mãn một số ràng buộc và tối ưu hóa một hàm vectơ có các phần
+ tử đại diện cho các hàm mục tiêu được cực tiểu hoặc cực đại đồng thời.
+ Mô hình bài toán: tìm vector biến 
+\begin_inset Formula 
+\[
+x=(x_{1},\ldots,x_{n})\in\mathbb{R}^{n}
+\]
+
+\end_inset
+
+sao cho tối đa/tối thiểu hàm mục tiêu
+\begin_inset Formula 
+\[
+f(x)=(f_{1}(x),\ldots,f_{m}(x))^{T}
+\]
+
+\end_inset
+
+thỏa mãn
+\begin_inset Formula 
+\[
+x_{i}^{lb}\leq x_{i}\leq x_{i}^{ub},\,i=1,\ldots,n
+\]
+
+\end_inset
+
+
+\begin_inset Formula $J$
+\end_inset
+
+ ràng buộc dấu
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{j}(x)\leq0,\,j=1,\ldots,J
+\]
+
+\end_inset
+
+
+\begin_inset Formula $K$
+\end_inset
+
+ ràng buộc đẳng thức
+\begin_inset Formula 
+\[
+h_{k}(x)=0,\,k=1,\ldots,K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Giải một bài toán MOP là tìm ra một tập nghiệm được gọi là tập Pareto.
+ Sau đó, chọn một nghiệm từ tập Pareto.
+ Không giống như một bài toán tối ưu hóa một mục tiêu, việc giải quyết một
+ bài toán MOP bao gồm ba bước quan trọng và hoàn toàn khác nhau: 
+\end_layout
+
+\begin_layout Enumerate
+Hình thành một mô hình toán học; 
+\end_layout
+
+\begin_layout Enumerate
+Tối ưu hóa;
+\end_layout
+
+\begin_layout Enumerate
+Ra quyết định.
+ 
+\end_layout
+
+\begin_layout Standard
+Trong bước tối ưu hóa, tập Pareto được xác định; Tuy nhiên, trong bước ra
+ quyết định, nghiệm tốt nhất được chọn từ tập Pareto dựa trên nhu cầu của
+ người ra quyết định.
+\end_layout
+
+\begin_layout Standard
+Theo tiếp cận trên không gian quyết định (decision space), việc giải bài
+ toán (MOP) được xem như việc xác định toàn bộ hay một phần của tập nghiệm
+ hữu hiệu 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ hoặc tập nghiệm hữu hiệu yếu 
+\begin_inset Formula $X_{WE}$
+\end_inset
+
+.
+ Đây là một việc khó, vì ngay cả trong trường hợp đơn giản nhất của (MOP)
+ là bài toán quy hoạch đa mục tiêu tuyến tính (LMOP), tập nghiệm hữu hiệu
+ 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ và tập nghiệm hữu hiệu yếu 
+\begin_inset Formula $X_{WE}$
+\end_inset
+
+ đã là các tập không lồi với cấu trúc rất phức tạp.
+ 
+\end_layout
+
+\begin_layout Standard
+Với hy vọng giảm khối lượng tính toán, các thuật toán theo hướng tiếp cận
+ trên không gian ảnh hay không gian giá trị (outcome space) được thiết kế
+ để xác định toàn bộ hay một phần của tập ảnh hữu hiệu 
+\begin_inset Formula $Y_{E}=f(X_{E})$
+\end_inset
+
+ hoặc tập ảnh hữu hiệu yếu 
+\begin_inset Formula $Y_{WE}=f(X_{WE})$
+\end_inset
+
+.
+ Lý do chính cho hướng tiếp cận này là: i) Các bài toán tối ưu đa mục tiêu
+ nảy sinh trong thực tế thường có số hàm mục tiêu 
+\begin_inset Formula $p$
+\end_inset
+
+ nhỏ hơn rất nhiều so với số biến 
+\begin_inset Formula $n$
+\end_inset
+
+; ii) Tập ảnh hữu hiệu 
+\begin_inset Formula $Y_{E}$
+\end_inset
+
+ có cấu trúc đơn giản hơn 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+; iii) Trong quá trình đưa ra quyết định, người ta thường lựa chọn phương
+ án dựa trên giá trị hữu hiệu hơn là dựa trên nghiệm hữu hiệu.
+\end_layout
+
+\begin_layout Standard
+Trong tối ưu đa mục tiêu, việc nghiên cứu để giải bài toán quy hoạch đa
+ mục tiêu tuyến tính (LMOP) có thể xem gần như hoàn chỉnh.
+ Rất nhiều thuật toán đã được đề xuất theo cả hai hướng tiếp cận trên không
+ gian quyết định và không gian ảnh để giải bài toán này bằng nhiều phương
+ pháp khác nhau như phương pháp đơn hình đa mục tiêu, phương pháp tham số,
+ phương pháp vô hướng hóa, phương pháp nón pháp tuyến, phương pháp xấp xỉ
+ ngoài hoặc kết hợp của các phương pháp đó.
+ Với bài toán quy hoạch đa mục tiêu lồi và không lồi, đã có một số thuật
+ toán được đề xuất.
+ Hầu hết các thuật toán theo tiếp cận trên không gian quyết định được thiết
+ kế dựa trên các phương pháp trọng số, phương pháp 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+−ràng buộc, phương pháp hàm lợi ích, phương pháp lexicographic, phương pháp
+ Tchebycheff,...
+ để sinh một phần tập nghiệm hữu hiệu hay hữu hiệu yếu của bài toán.
+ Theo tiếp cận trên không gian ảnh, các thuật toán thường sử dụng kỹ thuật
+ xấp xỉ ngoài để xây dựng một dãy các tập xấp xỉ tập ảnh, trong đó ta có
+ thể dễ dàng xác định được tập hữu hiệu các tập xấp xỉ này.
+ Với cách tiếp cận này, một mặt, thuật toán sinh ra một phần của tập ảnh
+ hữu hiệu của bài toán, mặt khác, nó sinh ra tập xấp xỉ của tập ảnh hữu
+ hiệu chứa toàn bộ tập ảnh hữu hiệu.
+\end_layout
+
+\begin_layout Standard
+Khi đã tìm được tập nghiệm Pareto, việc xác định một nghiệm tối ưu dựa trên
+ các yêu cầu chủ quan của DM cũng vô cùng quan trọng.
+ Đó gọi là bài toán tối ưu trên tập nghiệm hữu hiệu, có mô hình như sau:
+\begin_inset Formula 
+\[
+\min\,\,h(x)\,\,\text{v.đ.k\,\,x\ensuremath{\in X_{E}}}
+\]
+
+\end_inset
+
+trong đó 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ là một hàm số thực xác định và 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ là tập nghiệm của bài toán quy hoạch đa mục tiêu (MOP).
+\end_layout
+
+\begin_layout Standard
+Ví dụ, hãy xem xét một công ty tạo ra lợi nhuận.
+ Ngoài việc kiếm tiền, công ty muốn tăng trưởng, phát triển sản phẩm và
+ nhân viên của mình, đảm bảo việc làm cho người lao động và phục vụ cộng
+ đồng.
+ Các nhà quản lý muốn làm hài lòng các cổ đông, đồng thời được hưởng mức
+ lương và tài khoản chi phí cao, và nhân viên muốn tăng lương và phúc lợi
+ của họ.
+ Khi phải đưa ra một quyết định - ví dụ, về một dự án đầu tư - một số mục
+ tiêu này bổ sung cho nhau, trong khi những mục tiêu khác thì khác.
+ Kearns đã mô tả cách thức quy trình phân cấp phân tích (AHP), kết hợp với
+ quy hoạch nguyên để giải quyết nhiều mục tiêu trong việc đánh giá đầu tư
+ trong lĩnh vực IT.
+\end_layout
+
+\begin_layout Standard
+Trong thực tế sẽ tồn tại những khó khăn nhất định có thể phát sinh khi tối
+ ưu nhiều mục tiêu: 
+\end_layout
+
+\begin_layout Itemize
+Thông thường rất khó để có được một mô hình rõ ràng về các mục tiêu của
+ tổ chức.
+ 
+\end_layout
+
+\begin_layout Itemize
+Người ra quyết định có thể thay đổi tầm quan trọng được giao cho các mục
+ tiêu cụ thể theo thời gian hoặc cho các tình huống quyết định khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các mục tiêu chính và mục tiêu phụ được nhìn nhận khác nhau ở các cấp độ
+ khác nhau của tổ chức và trong các phòng ban khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các mục tiêu thay đổi để đáp ứng với những thay đổi trong tổ chức và môi
+ trường của nó.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mối quan hệ giữa các lựa chọn thay thế và vai trò của chúng trong việc xác
+ định mục tiêu có thể khó định lượng.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các vấn đề phức tạp được giải quyết bởi các nhóm người ra quyết định, mỗi
+ người trong số họ có một hướng giải quyết khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Những người tham gia đánh giá tầm quan trọng (ưu tiên) của các mục tiêu
+ khác nhau một cách khác nhau.
+\end_layout
+
 \end_body
 \end_document
