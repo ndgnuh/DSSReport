@@ -1,0 +1,2138 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass scrreprt
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+algorithm2e
+\end_modules
+\maintain_unincluded_children true
+\language vietnamese
+\language_package babel
+\inputencoding utf8x
+\fontencoding T5
+\font_roman "default" "Latin Modern Roman"
+\font_sans "default" "Latin Modern Sans"
+\font_typewriter "default" "Latin Modern Mono"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\output_sync_macro "\synctex=1"
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=cyan"
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 24 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\met}{\si{m}}
+{\text{m}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quy hoạch toán học là một họ công cụ được thiết kế để giúp giải quyết các
+ vấn đề quản lý, trong đó người ra quyết định phải phân bổ các nguồn lực
+ khan hiếm giữa các hoạt động để tối ưu hóa một mục tiêu có thể đo lường
+ được.
+ 
+\end_layout
+
+\begin_layout Standard
+Ví dụ, phân phối thời gian máy (tài nguyên) giữa các sản phẩm khác nhau
+ (các hoạt động) là một vấn đề phân bổ điển hình.
+ Các vấn đề phân bổ Quy hoạch tuyến tính (QHTT) thường có các đặc điểm sau:
+ 
+\end_layout
+
+\begin_layout Itemize
+Có thể phân bổ một lượng hạn chế các nguồn lực kinh tế.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các nguồn lực được sử dụng để sản xuất các sản phẩm hoặc dịch vụ.
+ 
+\end_layout
+
+\begin_layout Itemize
+Có hai hoặc nhiều cách để sử dụng các nguồn lực.
+ Mỗi cái được gọi là giải pháp hoặc một chương trình.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mỗi hoạt động (sản xuất hoặc dịch vụ) trong đó các nguồn lực được sử dụng
+ mang lại lợi nhuận dựa trên mục tiêu đã nêu.
+ 
+\end_layout
+
+\begin_layout Itemize
+Việc phân bổ thường bị hạn chế bởi một số giới hạn và yêu cầu, được gọi
+ là những ràng buộc.
+\end_layout
+
+\begin_layout Standard
+Mô hình phân bổ QHTT dựa trên các giả định kinh tế sau:
+\end_layout
+
+\begin_layout Itemize
+Có thể so sánh lợi nhuận từ các lần phân bổ khác nhau; nghĩa là chúng có
+ thể được đo lường bằng một đơn vị chung (ví dụ: đô la, tiện ích).
+ 
+\end_layout
+
+\begin_layout Itemize
+Lợi nhuận từ bất kỳ phân bổ nào là độc lập với các phân bổ khác.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tổng lợi nhuận là tổng lợi nhuận thu được từ các hoạt động khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tất cả dữ liệu được nắm biết một cách chắc chắn.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các nguồn lực phải được sử dụng một cách tiết kiệm nhất.
+ 
+\end_layout
+
+\begin_layout Standard
+Các vấn đề về phân bổ thường có một số lượng lớn các giải pháp khả thi.
+ Dựa trên các giả thiết cơ bản, số lượng nghiệm có thể là vô hạn hoặc hữu
+ hạn.
+ Thông thường, các giải pháp khác nhau mang lại phần thưởng khác nhau.
+ Trong số các giải pháp hiện có, ít nhất một giải pháp là tốt nhất, theo
+ nghĩa là mức độ đạt được mục tiêu đi kèm với nó là cao nhất (tức là tổng
+ phần thưởng được tối đa hóa).
+ Đây được gọi là một giải pháp tối ưu và nó có thể được tìm thấy bằng cách
+ sử dụng một thuật toán đặc biệt.
+\end_layout
+
+\begin_layout Section
+Quy hoạch tuyến tính
+\end_layout
+
+\begin_layout Standard
+Quy hoạch tuyến tính (QHTT) là công cụ nổi tiếng nhất trong họ các công
+ cụ tối ưu hóa được gọi là quy hoạch toán học.
+ Trong QHTT, tất cả các mối quan hệ giữa các biến là tuyến tính.
+ Trong lĩnh vực kinh doanh và quản lý, những người ra quyết định thường
+ phải đối mặt với vấn đề phân bổ nguồn lực hạn chế giữa các nhu cầu cạnh
+ tranh để tối đa hóa sản lượng, doanh thu, mức độ dịch vụ, v.v.
+ hoặc để giảm thiểu chi phí.
+ Ví dụ, trong lập kế hoạch sản xuất, phối trộn nguyên liệu, quản lý danh
+ mục đầu tư và lập kế hoạch cho nhân viên.
+ QHTT cung cấp một công cụ hỗ trợ quyết định, toàn diện để tính toán một
+ giải pháp tổng thể tốt nhất hoặc tối ưu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Xét một ví dụ thực tế như sau:
+\end_layout
+
+\begin_layout Standard
+Unimow sản xuất hai loại động cơ máy cắt cỏ James và Roker.
+ Năng lực lao động, phay và tiện là những chỉ những ràng buộc về sản xuất.
+ Để sản xuất mỗi James cần sử dụng ba giờ lao động, ba giờ phay và hai giờ
+ tiện, mỗi Roker sử dụng hai giờ lao động, một giờ phay và bốn giờ tiện.
+ James đóng góp cho đơn vị (trước khi phân bổ tổng chi phí cố định) là £
+ 22, Roker là £ 20.
+ Trong một tháng bất kỳ, có 120.000 giờ nhân công có sẵn, thời gian phay
+ 120.000 giờ và công suất tiện 150.000 giờ.
+ Làm sao công ty có thể tối đa hóa lợi nhuận?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trước tiên, cần mô hình hóa bài toán về dạng đại số, quá trình này gồm 4
+ bước
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 1: Xác định vấn đề.
+ 
+\series default
+Ở đây, vẫn đề cần giải quyết là tối đa hóa lợi nhuận.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 2: Xác định các biến.
+
+\series default
+ Ở bước này, những người ra quyết định cần phải quyết định có những biến
+ nào và ảnh hưởng như nào đến giải pháp.
+ Trong ví dụ này chỉ có hai biến, số lượng James sản xuất và tương ứng số
+ lượng Roker được sản xuất mỗi tháng, gọi là 
+\begin_inset Formula $J$
+\end_inset
+
+ và 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 3: Hình thành hàm mục tiêu.
+
+\series default
+ Hàm mục tiêu là một phương trình biểu thị cách thức mà các biến quyết định
+ ảnh hưởng đến giải pháp và thường được kết hợp với các từ tối đa hóa hoặc
+ tối thiểu hóa.
+ Hàm mục tiêu trong ví dụ này là 
+\begin_inset Formula 
+\[
+\max\,\,22J+20R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Bước 4: Xác định các ràng buộc.
+ 
+\series default
+Giai đoạn cuối cùng là xác định tất cả các ràng buộc trong điều kiện về
+ số lượng có thể được sản xuất.
+ Trong ví
+\series bold
+ 
+\series default
+dụ này,
+\series bold
+
+\begin_inset Formula 
+\begin{align*}
+\text{lao động\,\,\,\,\,}3J+2R & \le120\\
+\text{phay\,\,\,\,\,\,\,\,}3J+1.5R & \le120\\
+\text{tiện\,\,\,\,\,\,\,\,\,\,\,\,}2J+4R & \le150\\
+J,R\ge0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Có bốn phương pháp để giải quyết vấn đề: 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Mô hình "What if?"
+\series default
+, sử dụng phần mềm Microsoft Excel Solver.
+ Mô hình này có thể rất mạnh mẽ và đơn giản để xây dựng nhưng dựa vào quyết
+ định nhà sản xuất để đi đến câu trả lời chính xác.
+ Bản thân mô hình không mang tính quy định trong việc cung cấp câu trả lời
+ tốt nhất nhưng cho phép nhà quyết định xác định chiến lược nào là khả thi.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Phương pháp hình học
+\series default
+ sử dụng đồ thị, nhưng phương pháp này chỉ có thể được sử dụng để giải quyết
+ các bài toán đơn giản chỉ với hai biến và hạn chế số lượng ràng buộc.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Thuật toán Đơn hình
+\series default
+ hoặc một trong những biến thể của nó, một công cụ mạnh mẽ, nhưng một đòi
+ hỏi một khối lượng lớn các phép tính.
+ Bất kỳ số lượng biến nào có thể là đã xử lý nhưng số lượng phép tính nhanh
+ chóng trở nên không thể thực hiện được.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sử dụng các gói phần mềm chuyên dụng, thường không thân thiện với người
+ dùng, tốn kém và khó diễn giải.
+ Nhưng sẽ không giới hạn về số lượng các biến có thể được xử lý.
+\end_layout
+
+\begin_layout Section
+Quy hoạch nguyên
+\end_layout
+
+\begin_layout Standard
+Một quy hoạch tuyến tính nguyên là một bài toán quy hoạch tuyến tính mà
+ trong đó một phần hay toàn bộ các biến số mục tiêu có điều kiện nguyên.
+ Trong nhiều trường hợp, quy hoạch tuyến tính nguyên được nói tắt là quy
+ hoạch nguyên.
+ Bài toán quy hoạch nguyên với toàn bộ các biến mục tiêu là nguyên được
+ gọi là bài toán quy hoạch nguyên hoàn toàn, ngược lại thì được gọi là bài
+ toán quy hoạch nguyên bộ phận.
+\end_layout
+
+\begin_layout Standard
+Một mô hình quy hoạch nguyên có dạng
+\begin_inset Formula 
+\[
+\begin{array}{crcrcccrcl}
+\min & c_{1}x_{1} & + & c_{2}x_{2} & + & \cdots & + & c_{n}x_{n}\\
+ & a_{1,1}x_{1} & + & a_{1,2}x_{2} & + & \cdots & + & a_{1,n}x_{n} & \le & b_{1}\\
+ & \vdots &  & \vdots &  & \ddots &  & \vdots &  & \vdots\\
+ & a_{m,1}x_{1} & + & a_{m,2}x_{2} & + & \cdots & + & a_{m,n}x_{n} & \le & b_{m}\\
+ &  &  &  &  &  &  & \mathllap{x_{1},x_{2},\ldots,x_{n}} & \in & \mathbb{Z}_{+}
+\end{array}
+\]
+
+\end_inset
+
+Trong đó, các số 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{m}$
+\end_inset
+
+ là các số không âm.
+\end_layout
+
+\begin_layout Subsection
+Mô hình hóa
+\end_layout
+
+\begin_layout Standard
+Trong việc hỗ trợ đưa ra quyết định, bài toán quy hoạch nguyên thường được
+ dùng trong việc phân chia tài nguyên vào các công việc khác nhau.
+ Trong đó các biến 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ là các biến quyết định, các bất phương trình 
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a_{i,1}x_{1}+a_{i,2}x_{2}+\cdots+a_{i,n}x_{n}\le b_{i}
+\]
+
+\end_inset
+
+là các ràng buộc thể hiện những điều kiện thực tế không điều khiển được
+ như công nghệ, tài chính, nhân lực, etc.
+ Một cách lý thuyết, những bài toán quy hoạch nguyên dưới dạng này luôn
+ có nghiệm.
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "eg:ip-01"
+
+\end_inset
+
+Một công ty ở có dự định xây thêm một vài phân xưởng mới ở hai thành phố
+ A và B để gia tăng sản xuất.
+ Ước tính mỗi xưởng ở thành phố A sẽ đem lại lợi nhuận 70
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ mỗi ngày, ở thành phố B là 60
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ mỗi ngày.
+ Xây dựng một xưởng ở thành phố A sẽ tốn 60
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000 VNĐ và ở thành phố B sẽ tốn 50
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ.
+ Tổng số tiền cho xây dựng thêm là 300
+\begin_inset space \thinspace{}
+\end_inset
+
+000
+\begin_inset space \thinspace{}
+\end_inset
+
+000VNĐ.
+ Vậy ở mỗi thành phố nên xây dựng thêm bao nhiêu phân xưởng?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Các biến quyết định ở đây là số xưởng cần xây, do đó đặt số xưởng sẽ xây
+ dựng ở thành phố A là 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, ở thành phố B là 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ Quy đơn vị tiền mặt sang nghìn VNĐ.
+ Số tiền lợi nhuận cho một ngày sẽ là 
+\begin_inset Formula 
+\[
+70x_{1}+60x_{2}.
+\]
+
+\end_inset
+
+Ta mong muốn lợi nhuận càng cao càng tốt, do đó 
+\begin_inset Formula $\max70x_{1}+60x_{2}$
+\end_inset
+
+ sẽ là hàm mục tiêu của chúng ta.
+ Với điều kiện chi phí xây dựng ở mỗi thành phố và tổng số tiền, ta có ràng
+ buộc:
+\begin_inset Formula 
+\[
+60\,000x_{1}+50\,000x_{2}\le300\thinspace000.
+\]
+
+\end_inset
+
+Điều kiện này có thể rút gọn lại là:
+\begin_inset Formula 
+\[
+6x_{1}+5x_{2}\le30.
+\]
+
+\end_inset
+
+Trong đó theo lẽ thường, các số xưởng được xây–các biến 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ và 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ phải là số nguyên, ta có thêm ràng buộc 
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset
+
+ nguyên.
+ Vậy quy hoạch nguyên mô hình hóa bài toán này là:
+\begin_inset Formula 
+\[
+\begin{array}{crcrll}
+\max & 70x_{1} & + & 60x_{2}\\
+ & 6x_{1} & + & 5x_{2} & \le & 30\\
+ &  &  & \mathllap{x_{1},x_{2}} & \mathrlap{\text{nguyên}}
+\end{array}.
+\]
+
+\end_inset
+
+Sau khi giải bài toán này, chúng ta sẽ thu được số phân xưởng cần xây dựng
+ để sinh lời lớn nhất, thỏa mãn với những ràng buộc về điều kiện tài chính
+ hiện tại.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tối ưu tổ hợp
+\end_layout
+
+\begin_layout Standard
+Tối ưu tổ hợp là một nhánh của tối ưu.
+ Những bài toán tối ưu tổ hợp nằm dưới dạng: tìm một lời giải tối ưu trong
+ tập hữu hạn những lời giải.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Lời giải
+\begin_inset Quotes erd
+\end_inset
+
+ ở đây được hiểu theo nghĩa rất chung, mỗi bài toán sẽ có một định nghĩa
+ các lời giải riêng.
+ Một số ví dụ về tối ưu tổi hợp là:
+\end_layout
+
+\begin_layout Itemize
+Bài toán người đi du lịch: cho một danh sách các thành phố và khoảng cách
+ của mỗi cặp trong số các thành phố đó; một người muốn đi qua các thành
+ phố này, mỗi thành phố đi một lần và quay lại thành phố ban đầu; vậy người
+ đó nên đi qua các thành phố theo thứ tự nào để đoạn đường đi qua là ngắn
+ nhất? Các lời giải ở đây là thứ tự đi qua mỗi thành phố.
+\end_layout
+
+\begin_layout Itemize
+Bài toán cái túi: một người cần cho một số lượng đồ tư trang vào một túi
+ hành lý, mỗi vật có một trọng lượng nào đó, nên mang đồ vật như thế nào
+ để vừa thỏa mãn sử dụng cá nhân, vừa không quá sức chứa của túi hành lý.
+ Các lời giải ở đây là cách thức người đó xếp đồ vào hành lý (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+xếp những thứ gì, số lượng bao nhiêu).
+\end_layout
+
+\begin_layout Standard
+Mỗi bài toán tổ hợp sẽ có một bài toán phụ đi kèm gọi là 
+\emph on
+bài toán quyết định
+\emph default
+: cho một lời giải 
+\begin_inset Formula $y$
+\end_inset
+
+ của bài toán tổ hợp, hỏi lời giải đó có chấp nhận được không.
+ Thông thường, những bài toán tối ưu tổ hợp có tập lời giải rất lớn, do
+ đó việc lặp qua từng phần tử để đánh giá và lựa chọn hoặc không khả thi,
+ hoặc rất tốn kém và không hiệu quả.
+\end_layout
+
+\begin_layout Standard
+Tối ưu tổ hợp có nhiều ứng dụng trong thực tế.
+ Một dạng bài toán có thể được áp dụng cho nhiều vấn đề khác nhau với cùng
+ dạng đó.
+ Phần này liệt kê một số dạng tối ưu tổ hợp mà hữu dụng trong việc hỗ trợ
+ quyết định.
+\end_layout
+
+\begin_layout Subsection
+Bài toán vận tải
+\end_layout
+
+\begin_layout Standard
+Bài toán vận tài là bài toán nghiên cứu tối ưu việc vận chuyển và phân bố
+ tài nguyên.
+ Bài toán vận tải có thể được mô hình hóa như một bài toán nguyên.
+ Ở dạng đơn giản nhất, bài toán vận tải được mô tả như sau:
+\end_layout
+
+\begin_layout Itemize
+Một công ty cần vận chuyển một loại hàng từ 
+\begin_inset Formula $m$
+\end_inset
+
+ điểm phát tới 
+\begin_inset Formula $n$
+\end_inset
+
+ điểm thu
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m$
+\end_inset
+
+ điểm phát có lượng cung tương ứng là 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{m}$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+ điểm thu có lượng cầu tương ứng là 
+\begin_inset Formula $b_{1},b_{2},\ldots,b_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hàng hóa được phân phối từ mỗi điểm phát đến mỗi điểm thu tùy ý.
+ 
+\end_layout
+
+\begin_layout Itemize
+Một điểm thu có thể nhận hàng tại một điểm phát bất kì.
+\end_layout
+
+\begin_layout Itemize
+Các điểm thu phải thu đủ số hàng.
+\end_layout
+
+\begin_layout Itemize
+Các điểm phát phải phát đủ số hàng.
+\end_layout
+
+\begin_layout Itemize
+Hàng đã được nhận rồi thì không thể được trả lại.
+\end_layout
+
+\begin_layout Standard
+Ký hiệu 
+\begin_inset Formula $x_{i,j}$
+\end_inset
+
+ là lượng hàng vận chuyển và 
+\begin_inset Formula $c_{i,j}$
+\end_inset
+
+ là cước phí vận chuyển một đơn vị hàng từ điểm phát 
+\begin_inset Formula $i$
+\end_inset
+
+ tới điểm thu 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Bài toán vận tải sẽ được mô hình hóa như sau:
+\begin_inset Formula 
+\begin{align*}
+\min f\left(x\right) & =\sum_{j=1}^{n}\sum_{i=1}^{m}c_{ij}x_{ij}\\
+\text{v.đ.k }\sum_{j=1}^{n}x_{ij} & =a_{i}\quad i=\overline{1,m}\\
+\sum_{i=1}^{m}x_{ij} & =b_{j}\quad j=\overline{1,n}\\
+x_{ij} & \ge0\quad i=\overline{1,m},j=\overline{1,n}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nghiệm của bài toán sẽ là một ma trận phân phát, cho biết những cơ sở sản
+ xuất nào nên phân phát hàng tới điểm thu nào, và với trữ lượng bao nhiêu.
+ Ngoài việc sử dụng các thuật toán quy hoạch tuyến tính ra, thuật toán chuyên
+ biệt như thuật toán thế vị có thể được sử dụng để tìm nghiệm nhanh chóng
+ hơn.
+ 
+\end_layout
+
+\begin_layout Standard
+Điều kiện để bài toán vận tải có nghiệm là tổng trữ lượng ở điểm phát và
+ tổng nhu cầu ở điểm thu phải bằng nhau.
+ Trong thực tế điều này không phải lúc nào cũng thỏa mãn.
+ Giả sử trong trường hợp tổng lượng hàng cần vận chuyển bé hơn nhu cầu,
+ chúng ta xử lý bằng cách tạo ra một điểm phát 
+\begin_inset Quotes eld
+\end_inset
+
+giả
+\begin_inset Quotes erd
+\end_inset
+
+ và giải bài toán như bình thường.
+ Trong trường hợp này, khi giải ra nghiệm, điểm thu mà nhận hàng từ điểm
+ phát 
+\begin_inset Quotes eld
+\end_inset
+
+ảo
+\begin_inset Quotes erd
+\end_inset
+
+ sẽ bị thiếu hàng so với nhu cầu thực tế.
+\end_layout
+
+\begin_layout Standard
+Ngoài dạng cơ bản ra, bài toán vận tải còn có những dạng biến thể khác,
+ phục vụ cho những bài toán khác mà không phải phân phối hàng (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+bài toán phân công công việc), hoặc cho các điều kiện khác trong thực tế,
+ ví dụ như bài toán vận tải dạng 
+\begin_inset Formula $\max$
+\end_inset
+
+–chúng ta không tối ưu chi phí, mà là lợi nhuận, bài toán vận tải có ô cấm–một
+ số điểm phát hàng không thể vận chuyển tới một số điểm thu nào đó\SpecialChar ldots
+
+\end_layout
+
+\begin_layout Subsection
+Bài toán luồng cực đại
+\end_layout
+
+\begin_layout Standard
+Bài toán luồng cực đại trên đồ thị là bài toán mà trong đó, chúng ta có
+ một mạng lưới mà tài nguyên lưu thông từ một điểm nguồn tới một điểm đích.
+ Trên mạng lưới này, đường thông qua từ một nút này tới một nút khác gọi
+ là cung, khả năng thông qua của mỗi cung này đều đã được biết.
+ Một luồng trên mạng có thể hiểu là một cách cấu hình lượng tài nguyên đi
+ qua trên mỗi cung.
+ Ta cần tìm một luồng trên mạng lưới này sao cho khả năng tài nguyên thông
+ qua mạng này là lớn nhất.
+ 
+\end_layout
+
+\begin_layout Standard
+Một cách hình thức, bài toán luồng cực đại được mô hình hóa như sau: Cho
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ là một mạng lưới với 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $t$
+\end_inset
+
+ lần lượt là điểm phát và điểm thu, 
+\begin_inset Formula $V$
+\end_inset
+
+ là tập các điểm và 
+\begin_inset Formula $E$
+\end_inset
+
+ là tập các cung.
+ Xét điểm 
+\begin_inset Formula $u,v$
+\end_inset
+
+ bất kì thuộc 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Mỗi cung 
+\begin_inset Formula $e=\left(u,v\right)\in E$
+\end_inset
+
+ trên mạng lưới có giới hạn lưu lượng là số thực 
+\begin_inset Formula $c_{u,v}$
+\end_inset
+
+.
+ Một luồng trên mạng là một hàm 
+\begin_inset Formula $f\left(e\right)$
+\end_inset
+
+ đo giá trị của luồng qua cung đó.
+ Ta xét một luồng cực đại hay không căn cứ vào giá trị của luồng, được tính
+ bởi.
+ 
+\begin_inset Formula 
+\[
+\left|f\right|=\sum_{v\colon\left(s,v\right)\in E}f\left(\left(s,v\right)\right),
+\]
+
+\end_inset
+
+tức tổng lưu lượng từ điểm phát tới điểm thu.
+ Vì lưu lượng trên mỗi cung không thể vượt quá giới hạn, ta có ràng buộc
+\begin_inset Formula 
+\[
+f\left(\left(u,v\right)\right)\le c_{u,v},\qquad\text{với mọi }\left(u,v\right)\in E.
+\]
+
+\end_inset
+
+Vì mỗi điểm trung gian không thể tồn lại bất kỳ tài nguyên nào, ta có thêm
+ ràng buộc với mọi điểm 
+\begin_inset Formula $v$
+\end_inset
+
+ trong 
+\begin_inset Formula $V$
+\end_inset
+
+ mà không phải điểm thu hay điểm phát:
+\begin_inset Formula 
+\[
+\forall v\in V\backslash\left\{ s,t\right\} \colon\sum_{u\colon\left(u,v\right)\in E}f\left(\left(u,v\right)\right)=\sum_{u\colon\left(v,u\right)\in E}f\left(\left(v,u\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vì bài toán luồng cực đại cũng là một quy hoạch tuyến tính, ta cũng có thể
+ giải bằng các công cụ quy hoạch tuyến tính.
+ Tuy nhiên có các phương pháp khác được thiết kế riêng cho bài toán như
+ phương pháp đường tăng luồng, phương pháp Ford–Fulkerson\SpecialChar ldots
+ 
+\end_layout
+
+\begin_layout Standard
+Trong thực tế, bài toán luồng cực đại có rất nhiều ứng dụng.
+ Đôi lúc, chúng ta có nhiều điểm phát và nhiều điểm thu, khi đó chỉ cần
+ thêm một điểm phát và điểm thu giả để thay thế cho tất cả những điểm phát,
+ điểm thu là ta lại có bài toán gốc.
+ Những cung nối với điểm thu/phát giả sẽ không có giới hạn lưu lượng.
+ Ngoài ra cũng có thể có những biến thể khác sao cho phù hợp với bài toán
+ thực tế (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+lập lịch cho các chuyến bay của các hãng hàng không).
+\end_layout
+
+\begin_layout Subsection
+Bài toán cắt vật liệu
+\end_layout
+
+\begin_layout Standard
+Bài toán cắt vật liệu liên quan tới việc cắt các tấm vật liệu với kích cỡ
+ nào đó, sao cho đủ yêu cầu và tối thiểu số vật liệu bị lãng phí.
+ Đây là một bài toán xuất phát từ nhu cầu trong công nghiệp.
+\end_layout
+
+\begin_layout Example
+Nhà sản xuất có các thanh vật liệu dài 
+\begin_inset Formula $2\met$
+\end_inset
+
+, được yêu cầu sản xuất ra 
+\begin_inset Formula $1000$
+\end_inset
+
+ thanh vật liệu loại 
+\begin_inset Formula $0.9\met,$
+\end_inset
+
+
+\begin_inset Formula $1200$
+\end_inset
+
+ thanh loại 
+\begin_inset Formula $0.5\met$
+\end_inset
+
+, 
+\begin_inset Formula $1500$
+\end_inset
+
+ thanh loại ba 
+\begin_inset Formula $0.4\met$
+\end_inset
+
+.
+ Vấn đề đặt ra là cần một cách cắt sao cho tổng số vật liệu là nhỏ nhất.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Đặt 
+\begin_inset Formula $J$
+\end_inset
+
+ là tập các mẫu cắt 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ là số lần cắt theo mẫu cắt 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+ là số lần cắt vật liệu 
+\begin_inset Formula $i$
+\end_inset
+
+ theo mẫu 
+\begin_inset Formula $j$
+\end_inset
+
+, bài toán này có thể được mô hình hóa như một bài toán quy hoạch nguyên:
+\begin_inset Formula 
+\begin{align*}
+\min & \sum_{j}Y_{j}\\
+ & \sum_{j}a_{1,j}Y_{j}\ge1000\\
+ & \sum_{j}a_{2,j}Y\ge1200\\
+ & \sum_{j}a_{3,j}Y_{j}\ge1500\\
+ & Y_{j}\in\mathbb{Z},Y_{j}\ge0\text{ với }j\in J
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tuy nhiên, khi giải những bài toán cắt vật bằng các phương pháp của quy
+ hoạch nguyên, ta gặp một vấn đề, đó là tập mẫu cắt có thể rất lớn, khiến
+ cho kích cỡ của bàn toán trở nên khổng lồ.
+ Với những bài toán cắt vật liệu, có một phương pháp hiệu quả hơn, đó là
+ phương pháp sinh cột.
+ Trong phương pháp sinh cột, chúng ta sẽ bắt đầu giải bài toán với một tập
+ con của tập mẫu cắt 
+\begin_inset Formula $J$
+\end_inset
+
+.
+ Ví dụ torng bài toán trên, tập mẫu cắt khởi tạo có thể là:
+\end_layout
+
+\begin_layout Itemize
+Mẫu 1: cắt hai thanh vật liệu 
+\begin_inset Formula $0.9\met$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mẫu 2: cắt bốn thanh vật liệu 
+\begin_inset Formula $0.5\met$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mẫu 3: cắt năm thanh vật liệu 
+\begin_inset Formula $0.4\met$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trong quá trình giải theo thuật toán, những mẫu cắt mới cần thiết sẽ được
+ đưa vào, do đó cách tiếp cận này giải được bài toán mà không cần xét tới
+ toàn bộ tập mẫu cắt.
+ Kích cỡ của bài toán sẽ tăng dần lên sau mỗi bước sinh cột (sinh mẫu).
+ Trong trường hợp tốt nhất, thuật toán sẽ tìm được nghiệm tối ưu ở bước
+ đầu tiên, chúng ta có cách cắt tối ưu với ba mẫu đã chọn ban đầu.
+\end_layout
+
+\begin_layout Standard
+Khi giải theo thuật toán sinh cột, tùy mỗi cách chọn mẫu đầu vào, thuật
+ toán có thể tạo ra những phương án tối ưu khác nhau.
+ Mặc dù mức sử dụng vật liệu trên lý thuyết là giống nhau, những phương
+ án tối ưu này sẽ tạo ra các dư thừa vật liệu khác nhau.
+ Lượng dư thừa của vật liệu 
+\begin_inset Formula $i$
+\end_inset
+
+–khi có nghiệm của bài toán–có thể dễ dàng tính bằng công thức 
+\begin_inset Formula $\sum_{j}Y_{j}a_{i,j}-n_{j}$
+\end_inset
+
+.
+ Nhà quản lý khi ứng dụng bài toán cắt vật liệu có thể cân nhắc chọn phương
+ án phù hợp với chiến lược của mình.
+\end_layout
+
+\begin_layout Section
+Tối ưu đa mục tiêu
+\end_layout
+
+\begin_layout Standard
+Tối ưu đa mục tiêu (MOP) là quy trình để tối ưu hóa hai hoặc nhiều mục tiêu
+ đồng thời với một số ràng buộc nhất định.
+ Về mặt toán học, bài toán MOO là bài toán tìm một vectơ của các biến quyết
+ định thỏa mãn một số ràng buộc và tối ưu hóa một hàm vectơ có các phần
+ tử đại diện cho các hàm mục tiêu được cực tiểu hoặc cực đại đồng thời.
+ Mô hình bài toán: tìm vector biến 
+\begin_inset Formula 
+\[
+x=(x_{1},\ldots,x_{n})\in\mathbb{R}^{n}
+\]
+
+\end_inset
+
+sao cho tối đa/tối thiểu hàm mục tiêu
+\begin_inset Formula 
+\[
+f(x)=(f_{1}(x),\ldots,f_{m}(x))^{T}
+\]
+
+\end_inset
+
+thỏa mãn
+\begin_inset Formula 
+\[
+x_{i}^{lb}\leq x_{i}\leq x_{i}^{ub},\,i=1,\ldots,n
+\]
+
+\end_inset
+
+
+\begin_inset Formula $J$
+\end_inset
+
+ ràng buộc dấu
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{j}(x)\leq0,\,j=1,\ldots,J
+\]
+
+\end_inset
+
+
+\begin_inset Formula $K$
+\end_inset
+
+ ràng buộc đẳng thức
+\begin_inset Formula 
+\[
+h_{k}(x)=0,\,k=1,\ldots,K
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Giải một bài toán MOP là tìm ra một tập nghiệm được gọi là tập Pareto.
+ Sau đó, chọn một nghiệm từ tập Pareto.
+ Không giống như một bài toán tối ưu hóa một mục tiêu, việc giải quyết một
+ bài toán MOP bao gồm ba bước quan trọng và hoàn toàn khác nhau: 
+\end_layout
+
+\begin_layout Enumerate
+Hình thành một mô hình toán học; 
+\end_layout
+
+\begin_layout Enumerate
+Tối ưu hóa;
+\end_layout
+
+\begin_layout Enumerate
+Ra quyết định.
+ 
+\end_layout
+
+\begin_layout Standard
+Trong bước tối ưu hóa, tập Pareto được xác định; Tuy nhiên, trong bước ra
+ quyết định, nghiệm tốt nhất được chọn từ tập Pareto dựa trên nhu cầu của
+ người ra quyết định.
+\end_layout
+
+\begin_layout Standard
+Theo tiếp cận trên không gian quyết định (decision space), việc giải bài
+ toán (MOP) được xem như việc xác định toàn bộ hay một phần của tập nghiệm
+ hữu hiệu 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ hoặc tập nghiệm hữu hiệu yếu 
+\begin_inset Formula $X_{WE}$
+\end_inset
+
+.
+ Đây là một việc khó, vì ngay cả trong trường hợp đơn giản nhất của (MOP)
+ là bài toán quy hoạch đa mục tiêu tuyến tính (LMOP), tập nghiệm hữu hiệu
+ 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ và tập nghiệm hữu hiệu yếu 
+\begin_inset Formula $X_{WE}$
+\end_inset
+
+ đã là các tập không lồi với cấu trúc rất phức tạp.
+ 
+\end_layout
+
+\begin_layout Standard
+Với hy vọng giảm khối lượng tính toán, các thuật toán theo hướng tiếp cận
+ trên không gian ảnh hay không gian giá trị (outcome space) được thiết kế
+ để xác định toàn bộ hay một phần của tập ảnh hữu hiệu 
+\begin_inset Formula $Y_{E}=f(X_{E})$
+\end_inset
+
+ hoặc tập ảnh hữu hiệu yếu 
+\begin_inset Formula $Y_{WE}=f(X_{WE})$
+\end_inset
+
+.
+ Lý do chính cho hướng tiếp cận này là: i) Các bài toán tối ưu đa mục tiêu
+ nảy sinh trong thực tế thường có số hàm mục tiêu 
+\begin_inset Formula $p$
+\end_inset
+
+ nhỏ hơn rất nhiều so với số biến 
+\begin_inset Formula $n$
+\end_inset
+
+; ii) Tập ảnh hữu hiệu 
+\begin_inset Formula $Y_{E}$
+\end_inset
+
+ có cấu trúc đơn giản hơn 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+; iii) Trong quá trình đưa ra quyết định, người ta thường lựa chọn phương
+ án dựa trên giá trị hữu hiệu hơn là dựa trên nghiệm hữu hiệu.
+\end_layout
+
+\begin_layout Standard
+Trong tối ưu đa mục tiêu, việc nghiên cứu để giải bài toán quy hoạch đa
+ mục tiêu tuyến tính (LMOP) có thể xem gần như hoàn chỉnh.
+ Rất nhiều thuật toán đã được đề xuất theo cả hai hướng tiếp cận trên không
+ gian quyết định và không gian ảnh để giải bài toán này bằng nhiều phương
+ pháp khác nhau như phương pháp đơn hình đa mục tiêu, phương pháp tham số,
+ phương pháp vô hướng hóa, phương pháp nón pháp tuyến, phương pháp xấp xỉ
+ ngoài hoặc kết hợp của các phương pháp đó.
+ Với bài toán quy hoạch đa mục tiêu lồi và không lồi, đã có một số thuật
+ toán được đề xuất.
+ Hầu hết các thuật toán theo tiếp cận trên không gian quyết định được thiết
+ kế dựa trên các phương pháp trọng số, phương pháp 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+−ràng buộc, phương pháp hàm lợi ích, phương pháp lexicographic, phương pháp
+ Tchebycheff,...
+ để sinh một phần tập nghiệm hữu hiệu hay hữu hiệu yếu của bài toán.
+ Theo tiếp cận trên không gian ảnh, các thuật toán thường sử dụng kỹ thuật
+ xấp xỉ ngoài để xây dựng một dãy các tập xấp xỉ tập ảnh, trong đó ta có
+ thể dễ dàng xác định được tập hữu hiệu các tập xấp xỉ này.
+ Với cách tiếp cận này, một mặt, thuật toán sinh ra một phần của tập ảnh
+ hữu hiệu của bài toán, mặt khác, nó sinh ra tập xấp xỉ của tập ảnh hữu
+ hiệu chứa toàn bộ tập ảnh hữu hiệu.
+\end_layout
+
+\begin_layout Standard
+Khi đã tìm được tập nghiệm Pareto, việc xác định một nghiệm tối ưu dựa trên
+ các yêu cầu chủ quan của DM cũng vô cùng quan trọng.
+ Đó gọi là bài toán tối ưu trên tập nghiệm hữu hiệu, có mô hình như sau:
+\begin_inset Formula 
+\[
+\min\,\,h(x)\,\,\text{v.đ.k\,\,x\ensuremath{\in X_{E}}}
+\]
+
+\end_inset
+
+trong đó 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ là một hàm số thực xác định và 
+\begin_inset Formula $X_{E}$
+\end_inset
+
+ là tập nghiệm của bài toán quy hoạch đa mục tiêu (MOP).
+\end_layout
+
+\begin_layout Standard
+Ví dụ, hãy xem xét một công ty tạo ra lợi nhuận.
+ Ngoài việc kiếm tiền, công ty muốn tăng trưởng, phát triển sản phẩm và
+ nhân viên của mình, đảm bảo việc làm cho người lao động và phục vụ cộng
+ đồng.
+ Các nhà quản lý muốn làm hài lòng các cổ đông, đồng thời được hưởng mức
+ lương và tài khoản chi phí cao, và nhân viên muốn tăng lương và phúc lợi
+ của họ.
+ Khi phải đưa ra một quyết định - ví dụ, về một dự án đầu tư - một số mục
+ tiêu này bổ sung cho nhau, trong khi những mục tiêu khác thì khác.
+ Kearns đã mô tả cách thức quy trình phân cấp phân tích (AHP), kết hợp với
+ quy hoạch nguyên để giải quyết nhiều mục tiêu trong việc đánh giá đầu tư
+ trong lĩnh vực IT.
+\end_layout
+
+\begin_layout Standard
+Trong thực tế sẽ tồn tại những khó khăn nhất định có thể phát sinh khi tối
+ ưu nhiều mục tiêu: 
+\end_layout
+
+\begin_layout Itemize
+Thông thường rất khó để có được một mô hình rõ ràng về các mục tiêu của
+ tổ chức.
+ 
+\end_layout
+
+\begin_layout Itemize
+Người ra quyết định có thể thay đổi tầm quan trọng được giao cho các mục
+ tiêu cụ thể theo thời gian hoặc cho các tình huống quyết định khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các mục tiêu chính và mục tiêu phụ được nhìn nhận khác nhau ở các cấp độ
+ khác nhau của tổ chức và trong các phòng ban khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các mục tiêu thay đổi để đáp ứng với những thay đổi trong tổ chức và môi
+ trường của nó.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mối quan hệ giữa các lựa chọn thay thế và vai trò của chúng trong việc xác
+ định mục tiêu có thể khó định lượng.
+ 
+\end_layout
+
+\begin_layout Itemize
+Các vấn đề phức tạp được giải quyết bởi các nhóm người ra quyết định, mỗi
+ người trong số họ có một hướng giải quyết khác nhau.
+ 
+\end_layout
+
+\begin_layout Itemize
+Những người tham gia đánh giá tầm quan trọng (ưu tiên) của các mục tiêu
+ khác nhau một cách khác nhau.
+\end_layout
+
+\begin_layout Section
+Vét cạn
+\end_layout
+
+\begin_layout Standard
+Tìm kiếm vét cạn (complete search) là một phương pháp thông thường để giải
+ hầu hết bất kỳ bài toán tối ưu nào.
+ Ý tưởng là duyệt hết tất cả các lời giải có thể có của bài toán bằng cách
+ sử dụng vét cạn (brute force), và sau đó lựa chọn một giải pháp tốt nhất.
+ Tìm kiếm vét cạn là một kỹ thuật tốt nếu có đủ thời gian để đi qua hết
+ tất cả các lời giải, vì việc tìm kiếm thường dễ để thực thi và nó luôn
+ cho ra lời giải chính xác.
+\end_layout
+
+\begin_layout Subsection
+Sinh tập con
+\end_layout
+
+\begin_layout Standard
+Có 2 phương pháp thông thường để tạo tập hợp con: chúng ta có thể thực hiện
+ một tìm kiếm đệ quy hoặc khai thác cách biểu diễn bit của số nguyên.
+\end_layout
+
+\begin_layout Subsection
+Sinh các hoán vị
+\end_layout
+
+\begin_layout Standard
+2 cách tiếp cận: chúng ta có thể dùng đệ quy hoặc duyệt qua các hoán vị
+ lặp.
+\end_layout
+
+\begin_layout Subsection
+Quay lui
+\end_layout
+
+\begin_layout Standard
+Thuật toán quay lui (backtracking) bắt đầu với một lời giải rỗng và mở rộng
+ lời giải từng bước.
+ Việc tìm kiếm đệ quy duyệt qua các cách khác nhau là cách để xây dựng nên
+ lời giải.
+\end_layout
+
+\begin_layout Example
+xem xét bài toán tính số cách đặt n con hậu lên bàn cờ n x n sao cho không
+ có con cậu nào tấn công lẫn nhau.
+\end_layout
+
+\begin_layout Standard
+Bài toán có thể được giải bằng cách sử dụng quay lui bởi việc đặt con hậu
+ lên bàn cờ theo từng hàng.
+ Chính xác hơn, một con hậu sẽ được đặt lên mỗi hàng sao cho không có con
+ hậu nào tấn công bất kỳ con hậu nào được đặt trước đó.
+ Một lời giải được tìm thấy khi tất cả n quân hậu được đặt trên bàn cờ.
+\end_layout
+
+\begin_layout Subsection
+Tìm kiếm nhánh cận
+\end_layout
+
+\begin_layout Standard
+húng ta thường có thể tối ưu quay lui bằng cách cắt tỉa cây tìm kiếm.
+ Ý tưởng là thêm 1 chút thông minh vào thuật toán để nó nhận ra càng sớm
+ càng tốt nếu một phần lời giải không thể được mở rộng đến lời giải hoàn
+ chỉnh.
+ Việc tối ưu có ảnh hưởng rất lớn đến hiệu quả của việc tìm kiếm.
+\end_layout
+
+\begin_layout Standard
+Chúng ta cùng xem xét bài toán tính số lượng con đường trên một lưới n x
+ n từ góc trên bên trái đến góc dưới bên phải sao cho con đường viến thăm
+ mỗi ô vuông duy nhất 1 lần.
+ Ví dụ, trên lưới 7x7.
+ Chúng ta tập trung vào trường hợp 7x7, bởi vì mức độ khó của nó là phù
+ hợp với nhu cầu của chúng ta.
+ Chúng ta bắt đầu với một thuật toán quay lui đơn giản, và sau đó tối ưu
+ nó từng bước bằng cách sử dụng quan sát, việc tìm kiếm có thể được cắt
+ tỉa.
+\end_layout
+
+\begin_layout Subsubsection
+Thuật toán cơ bản
+\end_layout
+
+\begin_layout Standard
+Phiên bản đầu tiên của thuật toán không chứa bất kỳ tối ưu nào.
+ Đơn giản, chúng ta sử dụng quay lui để tạo ra tất cả các con đường từ góc
+ trên bên trái đến góc dưới bên phải và đếm số lượng các con đường như vậy.
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 1
+\end_layout
+
+\begin_layout Standard
+Trong bất kỳ lời giải nào, ở bước đầu tiên chúng ta di chuyển xuống hoặc
+ qua phải.
+ Luôn có 2 con đường đối xứng qua đường chéo của lưới sau bước đầu tiên.
+ Do đó, chúng ta có thể quyết định rằng chúng ta bước đầu tiên chúng ta
+ luôn di chuyển xuống dưới (hoặc phải), và cuối cùng nhân với 2 thì ra số
+ lượng lời giải.
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 2
+\end_layout
+
+\begin_layout Standard
+Nếu con đường dẫn đến ô dưới cùng bên phải trước khi nó viếng thăm tất cả
+ các ô vuông khác của lưới, thì đó rõ ràng không thể mang lại một lời giải
+ hoàn chỉnh.
+ Sử dụng quan sát này, chúng ta kết thúc việc tìm kiếm ngay lập tức nếu
+ chúng ta tìm đến ô dưới cùng bên phải quá sớm.
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 3
+\end_layout
+
+\begin_layout Standard
+Nếu con đường chạm vào bước tường và chỉ có thể xoay qua bên trái hoặc bên
+ phải thì lưới bị chia thành 2 phần chứa các ô chưa được đi tới.
+ Trong trường hợp này, chúng ta không thể viếng thăm tất cả các ô, vì vậy
+ chúng ta kết thúc việc tìm kiếm.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Tối ưu 4
+\end_layout
+
+\begin_layout Standard
+Ý tưởng ở tối ưu 3 có thể được tổng quát: Nếu con đường không thể tiếp tục
+ tiến tới mà chỉ có thể rẽ trái hoặc phải, thì lưới sẽ bị chia thành 2 phần
+ mà cả hai phần có chứa những ô chưa được viếng thăm.
+ Rõ ràng chúng ta không thể viếng thăm tất cả các ô được, vì thế chúng ta
+ có thể kết thúc sớm việc tìm kiếm.
+\end_layout
+
+\begin_layout Subsection
+Chia để trị
+\end_layout
+
+\begin_layout Standard
+Chia để trị là một kỹ thuật mà không gian tìm kiếm được chia thành 2 phần
+ về kích thước.
+ Một tìm kiếm riêng biệt được thực hiện cho cả 2 phần, và kết quả cuối cùng
+ của việc tìm kiếm được kết hợp lại.
+\end_layout
+
+\begin_layout Standard
+Kỹ thuật này có thể được sử dụng nếu có một cách hiệu quả để kết hợp các
+ kết quả tìm kiếm lại.
+ Trong tình huống này, việc tìm kiếm song song có thể yêu cầu ít thời gian
+ hơn trong một không gian tìm kiếm lớn.
+ Thường, chúng ta có thể chuyển nhân tử 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ thành 
+\begin_inset Formula $2^{n/2}$
+\end_inset
+
+ khi sử dụng kỹ thuật chia để trị.
+\end_layout
+
+\begin_layout Subsection
+Kết luận 
+\end_layout
+
+\begin_layout Standard
+Tìm kiếm vét cạn không phải là một giải pháp tối ưu để giải quyết một bài
+ toán, nhưng nó luôn là 1 cách tiếp cận dễ để cho ta 1 giải pháp ban đầu
+ đúng đắn.
+ Từ lời giải này ta có thể áp dụng các kỹ thuật như tìm kiếm nhánh cận hoặc
+ chia để trị để tối ưu dần.
+\end_layout
+
+\begin_layout Section
+Độ phức tạp
+\end_layout
+
+\begin_layout Standard
+Bài toán quyết định là một trong những đối tượng trọng tâm nghiên cứu của
+ lý thuyết độ phức tạp tính toán.
+ 
+\end_layout
+
+\begin_layout Subsection
+Đánh giá thời gian thực hiện thuật giải:
+\end_layout
+
+\begin_layout Subsubsection
+Tính độc lập:
+\end_layout
+
+\begin_layout Standard
+Thế nào là một thuật giải nhanh.
+ Có thể lập chương trình, chạy máy rồi bấm giờ.
+ Tuy nhiên tốc độ thực hiện một chương trình phụ thuộc vào ngôn ngữ lập
+ trình, chương trình dịch, hệ điều hành, phần cứng của máy… Mặt khác, phải
+ lập trình mới đo được thời gian thực hiện của thuật giải.
+\end_layout
+
+\begin_layout Standard
+Cần đánh giá thời thực hiện sao cho:
+\end_layout
+
+\begin_layout Standard
+- Không phụ thuộc máy, ngôn ngữ lập trình, chương trình biên dịch.
+\end_layout
+
+\begin_layout Standard
+- Không cần phải triển khai chương trình thực hiện thuật giải.
+\end_layout
+
+\begin_layout Standard
+- Chỉ dựa vào bản thân thuật giải.
+\end_layout
+
+\begin_layout Subsubsection
+Các phép toán sơ cấp:
+\end_layout
+
+\begin_layout Standard
+Trước hết ta cần thống nhất những thao tác nào được coi là một phép tính.
+\end_layout
+
+\begin_layout Standard
+Đây là khái niện phép toán sơ cấp.
+ Các phép toán sơ cấp là những phép toán mà thời gian thực hiện nó đủ ngắn,
+ hay nói đúng hơn là không vượt quá một hằng số nào đó.
+ Các phép toán sau đây có thể coi là sơ cấp:
+\end_layout
+
+\begin_layout Standard
+- Các phép tính số học.
+\end_layout
+
+\begin_layout Standard
+- Các phép tính logic.
+\end_layout
+
+\begin_layout Standard
+- Các phép chuyển chỗ, gán…
+\end_layout
+
+\begin_layout Subsubsection
+Kích thước dữ liệu đầu vào:
+\end_layout
+
+\begin_layout Standard
+Cho một thuật giải ta hoàn toàn ước lượng được tổng số các phép toán sơ
+ cấp cần thiết để thực hiện thuật giải đó.
+ Một điều hiển nhiên là tổng số phép toán sơ cấp để giải một bài toán phụ
+ thuộc vào kích thước của bài toán.
+ Dùng cùng một thuật toán, tính một định thức cấp 5 rõ ràng cần ít phép
+ tính hơn định thức cấp 10.
+ Tổng số mục dữ liệu đầu vào là đặc trưng cho kích thước của bài toán.
+ Người ta thường dùng một số nguyên dương 
+\begin_inset Formula $n$
+\end_inset
+
+ để thể hiện kích thước này.
+\end_layout
+
+\begin_layout Standard
+Như vậy, một thuật giải 
+\begin_inset Formula $T$
+\end_inset
+
+ áp dụng để giải bài toán có kích thước n sẽ cần một tổng số 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ các phép toán sơ cấp.
+ 
+\begin_inset Formula $T(n)$
+\end_inset
+
+T(n) là một hàm của tham số 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hàm số 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ là đặc trưng cho hiệu quả của thuật giải 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Tình trạng dữ liệu đầu vào:
+\end_layout
+
+\begin_layout Standard
+Không chỉ có số lượng dữ liệu đầu vào quyết định thời gian thực hiện giải
+ thuật mà tình trạng dữ liệu cũng ảnh hưởng đến việc thuật giải thực hiện
+ nhanh hay chậm.
+ Xét bài toán sắp xếp một dãy số.
+ Rõ ràng là nếu dãy đã có sẵn thứ tự mong muốn hoặc gần thư thế thì công
+ việc phải làm ít hơn trường hợp một dãy bất kỳ.
+\end_layout
+
+\begin_layout Subsection
+Ký hiệu O lớn
+\end_layout
+
+\begin_layout Standard
+Định nghĩa: Giả sử 
+\begin_inset Formula $f(n)$
+\end_inset
+
+, 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ là 2 hàm số không âm, đồng biến theo 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Ta nói “
+\begin_inset Formula $f(n)$
+\end_inset
+
+ là O lớn của 
+\begin_inset Formula $g(n)$
+\end_inset
+
+” và viết: 
+\begin_inset Formula $f(n)=O(g(n))$
+\end_inset
+
+ khi và chỉ khi tồn tại hằng số 
+\begin_inset Formula $C$
+\end_inset
+
+ để 
+\begin_inset Formula $f(n)\leq C.g(n)$
+\end_inset
+
+ kể từ 
+\begin_inset Formula $n\geq n_{0}$
+\end_inset
+
+ nào đó.
+\end_layout
+
+\begin_layout Standard
+Ta nói 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ có cấp lớn không vượt quá 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ (dễ hiểu là 
+\begin_inset Formula $f(n)$
+\end_inset
+
+ có tăng tới đâu đi nữa cũng không thể vượt quá tốc độ tăng của 
+\begin_inset Formula $g(n)$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Ví dụ: 
+\begin_inset Formula $f(n)=2n^{2}+3n+5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(n)\leq2n^{2}+3n^{2}+5n^{2}=12n^{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall n\ge1$
+\end_inset
+
+.
+ Ta viết 
+\begin_inset Formula $f(n)=O(n2)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Viết 
+\begin_inset Formula $T(n)=O(g(n))$
+\end_inset
+
+ nghĩa là tốc độ tăng của 
+\begin_inset Formula $T(n)$
+\end_inset
+
+ khi tiến đến vô cùng không vượt quá tốc độ tăng của 
+\begin_inset Formula $g(n)$
+\end_inset
+
+.
+ Khi 
+\begin_inset Formula $n$
+\end_inset
+
+ lớn, 
+\begin_inset Formula $g(n)$
+\end_inset
+
+ cho ta hình dung được mức lớn của 
+\begin_inset Formula $T(n).g(n)$
+\end_inset
+
+ là “thước đo” độ lớn của 
+\begin_inset Formula $T(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ký hiệu 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ lớn và 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ lớn
+\end_layout
+
+\begin_layout Standard
+Tương tự như với bậc big-O, nếu như tìm được các hằng số 
+\begin_inset Formula $C,k1,k2$
+\end_inset
+
+ đều dương và không phụ thuộc vào 
+\begin_inset Formula $n$
+\end_inset
+
+, sao cho với 
+\begin_inset Formula $n$
+\end_inset
+
+ đủ lớn, các hàm 
+\begin_inset Formula $R(n),f(n)$
+\end_inset
+
+ và 
+\begin_inset Formula $h(n)$
+\end_inset
+
+ đều dương và
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R(n)\geq C\cdot f(n)
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+k_{1}\cdot h(n)\leq R(n)\leq k_{2}\cdot h(n)
+\]
+
+\end_inset
+
+ thì ta nói thuật toán có độ phức tạp cỡ lớn hơn 
+\begin_inset Formula $\Omega(n)$
+\end_inset
+
+, và đúng bằng cỡ 
+\begin_inset Formula $\Theta(h(n))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Như vậy nếu xét một cách chặt chẽ, kí hiệu 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ mới biểu thị độ phức tạp của thuật toán một cách chặt chẽ.
+ Do đó 2 ký hiệu thường được sử dụng trong đánh giá độ phức tạp của thuật
+ toán là Big-O và Big-
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+ Nhưng chúng ta thường sử dụng Big-O hơn.
+\end_layout
+
+\begin_layout Section
+Thuật toán xấp xỉ
+\end_layout
+
+\begin_layout Standard
+Thuật toán xấp xỉ là những thuật toán với hiệu năng tốt hơn các thuật toán
+ thông thường, để tìm nghiệm 
+\emph on
+gần đúng
+\emph default
+ cho các bài toán tối ưu.
+ Những thuật toán có một đảm bảo nào đó, chứng minh được, về sai số giữa
+ nghiệm gần tối ưu và nghiệm tối ưu thực sự.
+ Những thuật toán này được thiết kế với phỏng đoán rằng 
+\begin_inset Formula $P\ne NP$
+\end_inset
+
+, i.e.
+\begin_inset space \thinspace{}
+\end_inset
+
+có một số lớp bài toán mà không thể giải được với thời gian đa thức.
+\end_layout
+
+\begin_layout Standard
+Một số cách thiết kế thuật toán xấp xỉ bao gồm:
+\end_layout
+
+\begin_layout Enumerate
+Thuật toán tham lam là dạng thuật toán mà chọn điểm tối ưu địa phương ở
+ mỗi bước.
+ E.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+trong bài toán cái túi, phương pháp tham lam là lấy những vật có giá trị
+ cao và trọng lượng thấp đưa vào trước
+\end_layout
+
+\begin_layout Enumerate
+Tìm kiếm địa phương: lặp qua các phương án từ một phương án ban đầu cho
+ tới khi không tìm được phương án nào tốt hơn.
+\end_layout
+
+\begin_layout Enumerate
+Quy hoạch động: chia bài toán thành những vấn đề nhỏ hơn, và giải một cách
+ đệ quy.
+\end_layout
+
+\begin_layout Enumerate
+Giải bài toán nguyên ở dạng nới lỏng để thu được nghiệm không nguyên, sau
+ đó làm tròn một cách hợp lý.
+\end_layout
+
+\begin_layout Enumerate
+Lấy mẫu ngẫu nhiên hoặc sử dụng tính ngẫu nhiên.
+\end_layout
+
+\begin_layout Standard
+Với những thuật toán tối ưu, chúng ta có thể chứng minh được một vài tính
+ chất về nó.
+ Một thuật toán xấp xỉ được gọi là thuật toán 
+\begin_inset Formula $\rho$
+\end_inset
+
+–xấp xỉ nếu như với một đầu vào 
+\begin_inset Formula $x$
+\end_inset
+
+ thì tỉ lệ 
+\begin_inset Formula $\nicefrac{\text{giá trị}}{\text{chi phí}}$
+\end_inset
+
+ của việc xấp xỉ sẽ bé hơn (hoặc không lớn hơn) 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ Trong đó 
+\begin_inset Formula $\rho$
+\end_inset
+
+ được gọi là 
+\emph on
+giá trị đảm bảo hiệu năng tương đối
+\emph default
+.
+ Ngoài ra ta cũng có 
+\emph on
+giá trị đảm bảo hiệu năng
+\emph default
+ 
+\begin_inset Formula $R\left(x,y\right)$
+\end_inset
+
+, với phương án 
+\begin_inset Formula $y$
+\end_inset
+
+ của đầu vào 
+\begin_inset Formula $x$
+\end_inset
+
+, giá trị 
+\begin_inset Formula $R\left(x,y\right)\ge1$
+\end_inset
+
+, dấu bằng xảy ra khi mà nghiệm xấp xỉ chính là nghiệm tối ưu.
+ Một số bài toán được chứng minh lý thuyết rằng không có thuật toán xấp
+ xỉ 
+\begin_inset Formula $\rho$
+\end_inset
+
+ với một số giá trị nhất định.
+ Ví dụ với bài toán người đi du lịch, nếu ta có một thuật toán xấp xỉ, giá
+ trị 
+\begin_inset Formula $\rho$
+\end_inset
+
+ của nó sẽ nằm trong khoảng 
+\begin_inset Formula $1.008196$
+\end_inset
+
+ và 
+\begin_inset Formula $1.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Không phải thuật toán xấp xỉ nào cũng dùng được trong thực tế.
+ Ngoài những vấn đề như việc cái đặt phức tạp, thuật toán chỉ cải thiện
+ thời gian tính toán trên những đầu vào mà không thực tế, thuật toán khó
+ cài đặt\SpecialChar ldots
+ còn có cả vấn đề về sự chính xác.
+ Đôi lúc nghiệm đưa ra bởi thuật toán xấp xỉ không phù hợp với độ chính
+ xác mà bài toán quyết định yêu cầu trong thực tế.
+ Trong thực tế, những thuật toán xấp xỉ dạng PTAS thường được dùng.
+\end_layout
+
+\begin_layout Section
+Meta Heuristics
+\end_layout
+
+\begin_layout Standard
+Một heuristic là một dạng tìm kiếm để tìm nghiệm gần đúng của bài toán.
+ Ở mỗi bước lặp, một heuristic sẽ cân nhắc giá trị của các lựa chọn để quyết
+ định nên tiến hành theo lựa chọn nào.
+ Các heuristic đánh đổi sự chính xác và đầy đủ cho thời gian chạy.
+ Một meta heuristic là một heuristic bậc cao, có thể tìm, sinh ra, hoặc
+ lựa chọn giữa các heuristic.
+ Meta heuristic có thể được dùng để tìm nghiệm gần đúng, với rất ít giả
+ định và đủ tốt cho các bài toán tối ưu, do đó được sử dụng rộng rãi để
+ giải quyết nhiều bài toán.
+\end_layout
+
+\begin_layout Standard
+Khác với thuật toán xấp xỉ và các thuật toán tìm đúng, heuristic/meta heuristic
+ nói chung không có đảm bảo về mặt lý thuyết.
+ Thậm chí với những meta heuristic sử dụng yếu tố ngẫu nhiên, kết quả sẽ
+ phụ thuộc vào những số ngẫu nhiên được sinh ra trong quá trình giải.
+ Tuy nhiên, vì việc sử dụng meta heuristic đưa ra kết quả khả quan trong
+ nhiều trường hợp, nó vẫn được ứng dụng rộng rãi.
+ 
+\end_layout
+
+\begin_layout Standard
+Một họ meta heuristic rất phổ biến đó là thuật toán di truyền.
+ Để sử dụng thuật toán di truyền, đầu vào của bài toán cần được mã hóa ở
+ dạng nào đó.
+ Sau đó, ta cần định nghĩa một hàm đánh giá chất lượng, một cách để trao
+ đổi chéo, một cách để đột biến.
+ Quá trình chạy thuật toán có thể tổng quát như sau:
+\end_layout
+
+\begin_layout Enumerate
+Chọn và mã hóa một số đầu vào 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+, ta gọi mỗi 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ là một cá thể, và tập các 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ là quần thể.
+\end_layout
+
+\begin_layout Enumerate
+Đánh giá mỗi cá thể sử dụng hàm đánh giá 
+\begin_inset Formula $f$
+\end_inset
+
+, hàm này thường sử dụng hàm mục tiêu của bài toán.
+\end_layout
+
+\begin_layout Enumerate
+Tính độ thích nghi của cá thể 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ vào với công thức
+\begin_inset Formula 
+\[
+\frac{f\left(x_{i}\right)}{\sum_{k=1}^{n}f\left(x_{k}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Chọn một cách ngẫu nhiên hai hay nhiều cá thể giữa các cá thể dựa vào tỉ
+ lệ thích nghi.
+ Tiến hành trao đổi chéo để sinh ra một các thể mới.
+\end_layout
+
+\begin_layout Enumerate
+Chọn ngẫu nhiên một cá thể để đột biến, sinh ra cá thể mới.
+\end_layout
+
+\begin_layout Enumerate
+Thêm các cá thể mới vào trong quần thể, loại bỏ những cá thể 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ mà có 
+\begin_inset Formula $f\left(x_{i}\right)$
+\end_inset
+
+ không cao.
+\end_layout
+
+\begin_layout Enumerate
+Lặp lại từ bước 
+\begin_inset Formula $3$
+\end_inset
+
+ cho tới khi quần thể không đổi qua các bước lặp, hoặc đã qua một số bước
+ lặp nào đó mà không đạt được điều kiện như trên.
+\end_layout
+
+\begin_layout Standard
+Đây chỉ là phiên bản đơn giản nhất của giải thuật di truyền.
+ Tùy vào bài toán, cách cài đặt có thể đưa ra các biến thể, cấu hình khác
+ nhau của thuật toán (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+ta có thể giới hạn cho bước đột biến xảy ra với một số cá thể có ràng buộc
+ nào đó như 
+\begin_inset Formula $f\left(x_{i}\right)$
+\end_inset
+
+ thấp, hoặc cho bước đột biến chỉ xảy ra với một điều kiện nào đó).
+\end_layout
+
+\begin_layout Example
+Áp dụng thuật toán di truyền với bài toán người đi du lịch, ta có thể:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mã hóa đầu vào là một dãy số, thể hiện thứ tự đi qua các thành phố.
+\end_layout
+
+\begin_layout Enumerate
+Hàm đánh giá 
+\begin_inset Formula $f$
+\end_inset
+
+ chính là hàm mục tiêu.
+\end_layout
+
+\begin_layout Enumerate
+Việc trao đổi chéo giữa 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ và 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ được định nghĩa bằng cách dùng 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ như một hoán vị của 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (hoặc ngược lại)
+\end_layout
+
+\begin_layout Enumerate
+Việc đột biến của 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ được định nghĩa bằng cách lấy ra hai số thứ tự trong 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ và đổi thứ tự của chúng cho nhau
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

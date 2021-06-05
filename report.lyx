@@ -4,10 +4,11 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass scrreprt
+\textclass scrartcl
 \begin_preamble
 \usepackage{siunitx}
 \end_preamble
+\options fontsize=14
 \use_default_options true
 \begin_modules
 theorems-ams-bytype
@@ -28,8 +29,8 @@ algorithm2e
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
+\use_microtype true
+\use_dash_ligatures false
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -40,16 +41,19 @@ algorithm2e
 \paperfontsize default
 \spacing single
 \use_hyperref true
+\pdf_title "Báo cáo hệ hỗ trợ quyết định"
+\pdf_author "Nhóm 8: Nguyễn Đức Vượng, Nguyễn Đức Hùng"
+\pdf_subject "Phân tích tối ưu"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
 \pdf_bookmarksopen true
-\pdf_bookmarksopenlevel 2
+\pdf_bookmarksopenlevel 3
 \pdf_breaklinks false
 \pdf_pdfborder false
-\pdf_colorlinks true
+\pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "linkcolor=cyan"
+\pdf_quoted_options "linkcolor=red"
 \papersize default
 \use_geometry true
 \use_package amsmath 1
@@ -102,31 +106,7 @@ algorithm2e
 \begin_body
 
 \begin_layout Title
-Hệ hỗ trợ quyết định
-\end_layout
-
-\begin_layout Author
-Nhóm 8: Nguyễn Đức Hùng–20173520, Nguyễn Đức Vượng–20173603
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-addtocounter{chapter}{7}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-Phân tích tối ưu
+Báo cáo hệ hỗ trợ quyết định
 \end_layout
 
 \begin_layout Standard
