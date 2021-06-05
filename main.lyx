@@ -1466,5 +1466,176 @@ Không phải thuật toán xấp xỉ nào cũng dùng được trong thực t�
  Trong thực tế, những thuật toán xấp xỉ dạng PTAS thường được dùng.
 \end_layout
 
+\begin_layout Section
+Meta Heuristics
+\end_layout
+
+\begin_layout Standard
+Một heuristic là một dạng tìm kiếm để tìm nghiệm gần đúng của bài toán.
+ Ở mỗi bước lặp, một heuristic sẽ cân nhắc giá trị của các lựa chọn để quyết
+ định nên tiến hành theo lựa chọn nào.
+ Các heuristic đánh đổi sự chính xác và đầy đủ cho thời gian chạy.
+ Một meta heuristic là một heuristic bậc cao, có thể tìm, sinh ra, hoặc
+ lựa chọn giữa các heuristic.
+ Meta heuristic có thể được dùng để tìm nghiệm gần đúng, với rất ít giả
+ định và đủ tốt cho các bài toán tối ưu, do đó được sử dụng rộng rãi để
+ giải quyết nhiều bài toán.
+\end_layout
+
+\begin_layout Standard
+Khác với thuật toán xấp xỉ và các thuật toán tìm đúng, heuristic/meta heuristic
+ nói chung không có đảm bảo về mặt lý thuyết.
+ Thậm chí với những meta heuristic sử dụng yếu tố ngẫu nhiên, kết quả sẽ
+ phụ thuộc vào những số ngẫu nhiên được sinh ra trong quá trình giải.
+ Tuy nhiên, vì việc sử dụng meta heuristic đưa ra kết quả khả quan trong
+ nhiều trường hợp, nó vẫn được ứng dụng rộng rãi.
+ 
+\end_layout
+
+\begin_layout Standard
+Một họ meta heuristic rất phổ biến đó là thuật toán di truyền.
+ Để sử dụng thuật toán di truyền, đầu vào của bài toán cần được mã hóa ở
+ dạng nào đó.
+ Sau đó, ta cần định nghĩa một hàm đánh giá chất lượng, một cách để trao
+ đổi chéo, một cách để đột biến.
+ Quá trình chạy thuật toán có thể tổng quát như sau:
+\end_layout
+
+\begin_layout Enumerate
+Chọn và mã hóa một số đầu vào 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+, ta gọi mỗi 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ là một cá thể, và tập các 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ là quần thể.
+\end_layout
+
+\begin_layout Enumerate
+Đánh giá mỗi cá thể sử dụng hàm đánh giá 
+\begin_inset Formula $f$
+\end_inset
+
+, hàm này thường sử dụng hàm mục tiêu của bài toán.
+\end_layout
+
+\begin_layout Enumerate
+Tính độ thích nghi của cá thể 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ vào với công thức
+\begin_inset Formula 
+\[
+\frac{f\left(x_{i}\right)}{\sum_{k=1}^{n}f\left(x_{k}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Chọn một cách ngẫu nhiên hai hay nhiều cá thể giữa các cá thể dựa vào tỉ
+ lệ thích nghi.
+ Tiến hành trao đổi chéo để sinh ra một các thể mới.
+\end_layout
+
+\begin_layout Enumerate
+Chọn ngẫu nhiên một cá thể để đột biến, sinh ra cá thể mới.
+\end_layout
+
+\begin_layout Enumerate
+Thêm các cá thể mới vào trong quần thể, loại bỏ những cá thể 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ mà có 
+\begin_inset Formula $f\left(x_{i}\right)$
+\end_inset
+
+ không cao.
+\end_layout
+
+\begin_layout Enumerate
+Lặp lại từ bước 
+\begin_inset Formula $3$
+\end_inset
+
+ cho tới khi quần thể không đổi qua các bước lặp, hoặc đã qua một số bước
+ lặp nào đó mà không đạt được điều kiện như trên.
+\end_layout
+
+\begin_layout Standard
+Đây chỉ là phiên bản đơn giản nhất của giải thuật di truyền.
+ Tùy vào bài toán, cách cài đặt có thể đưa ra các biến thể, cấu hình khác
+ nhau của thuật toán (e.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+ta có thể giới hạn cho bước đột biến xảy ra với một số cá thể có ràng buộc
+ nào đó như 
+\begin_inset Formula $f\left(x_{i}\right)$
+\end_inset
+
+ thấp, hoặc cho bước đột biến chỉ xảy ra với một điều kiện nào đó).
+\end_layout
+
+\begin_layout Example
+Áp dụng thuật toán di truyền với bài toán người đi du lịch, ta có thể:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mã hóa đầu vào là một dãy số, thể hiện thứ tự đi qua các thành phố.
+\end_layout
+
+\begin_layout Enumerate
+Hàm đánh giá 
+\begin_inset Formula $f$
+\end_inset
+
+ chính là hàm mục tiêu.
+\end_layout
+
+\begin_layout Enumerate
+Việc trao đổi chéo giữa 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ và 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ được định nghĩa bằng cách dùng 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ như một hoán vị của 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ (hoặc ngược lại)
+\end_layout
+
+\begin_layout Enumerate
+Việc đột biến của 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ được định nghĩa bằng cách lấy ra hai số thứ tự trong 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ và đổi thứ tự của chúng cho nhau
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
