@@ -5,6 +5,9 @@
 \save_transient_properties true
 \origin unavailable
 \textclass scrreprt
+\begin_preamble
+\usepackage{siunitx}
+\end_preamble
 \use_default_options true
 \begin_modules
 theorems-ams-bytype
@@ -104,6 +107,15 @@ Hệ hỗ trợ quyết định
 
 \begin_layout Author
 Nguyễn Đức Hùng, Nguyễn Đức Vượng
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\met}{\si{m}}
+{\text{m}}
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -629,9 +641,7 @@ Bài toán vận tải
 \end_layout
 
 \begin_layout Standard
-Bài toán phân chia công việc là một trong những bài toán cơ bản trong tối
- ưu tổ hợp.
- Bài toán được trình bày qua một ví dụ như sau:
+Bài toán
 \end_layout
 
 \begin_layout Example
@@ -691,7 +701,126 @@ Nhà sản xuất có các thanh vật liệu dài
 \end_inset
 
 .
- Vấn đề đặt ra là cần một cách cắt sao cho tổng số vật liệu là nhỏ nhất
+ Vấn đề đặt ra là cần một cách cắt sao cho tổng số vật liệu là nhỏ nhất.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Đặt 
+\begin_inset Formula $J$
+\end_inset
+
+ là tập các mẫu cắt 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula $Y_{j}$
+\end_inset
+
+ là số lần cắt theo mẫu cắt 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $a_{i,j}$
+\end_inset
+
+ là số lần cắt vật liệu 
+\begin_inset Formula $i$
+\end_inset
+
+ theo mẫu 
+\begin_inset Formula $j$
+\end_inset
+
+, bài toán này có thể được mô hình hóa như một bài toán quy hoạch nguyên:
+\begin_inset Formula 
+\begin{align*}
+\min & \sum_{j}Y_{j}\\
+ & \sum_{j}a_{1,j}Y_{j}\ge1000\\
+ & \sum_{j}a_{2,j}Y\ge1200\\
+ & \sum_{j}a_{3,j}Y_{j}\ge1500\\
+ & Y_{j}\in\mathbb{Z},Y_{j}\ge0\text{ với }j\in J
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tuy nhiên, khi giải những bài toán cắt vật bằng các phương pháp của quy
+ hoạch nguyên, ta gặp một vấn đề, đó là tập mẫu cắt có thể rất lớn, khiến
+ cho kích cỡ của bàn toán trở nên khổng lồ.
+ Với những bài toán cắt vật liệu, có một phương pháp hiệu quả hơn, đó là
+ phương pháp sinh cột.
+ Trong phương pháp sinh cột, chúng ta sẽ bắt đầu giải bài toán với một tập
+ con của tập mẫu cắt 
+\begin_inset Formula $J$
+\end_inset
+
+.
+ Ví dụ torng bài toán trên, tập mẫu cắt khởi tạo có thể là:
+\end_layout
+
+\begin_layout Itemize
+Mẫu 1: cắt hai thanh vật liệu 
+\begin_inset Formula $0.9\met$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mẫu 2: cắt bốn thanh vật liệu 
+\begin_inset Formula $0.5\met$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mẫu 3: cắt năm thanh vật liệu 
+\begin_inset Formula $0.4\met$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trong quá trình giải theo thuật toán, những mẫu cắt mới cần thiết sẽ được
+ đưa vào, do đó cách tiếp cận này giải được bài toán mà không cần xét tới
+ toàn bộ tập mẫu cắt.
+ Kích cỡ của bài toán sẽ tăng dần lên sau mỗi bước sinh cột (sinh mẫu).
+ Trong trường hợp tốt nhất, thuật toán sẽ tìm được nghiệm tối ưu ở bước
+ đầu tiên, chúng ta có cách cắt tối ưu với ba mẫu đã chọn ban đầu.
+\end_layout
+
+\begin_layout Standard
+Khi giải theo thuật toán sinh cột, tùy mỗi cách chọn mẫu đầu vào, thuật
+ toán có thể tạo ra những phương án tối ưu khác nhau.
+ Mặc dù mức sử dụng vật liệu trên lý thuyết là giống nhau, những phương
+ án tối ưu này sẽ tạo ra các dư thừa vật liệu khác nhau.
+ Lượng dư thừa của vật liệu 
+\begin_inset Formula $i$
+\end_inset
+
+–khi có nghiệm của bài toán–có thể dễ dàng tính bằng công thức 
+\begin_inset Formula $\sum_{j}Y_{j}a_{i,j}-n_{j}$
+\end_inset
+
+.
+ Nhà quản lý khi ứng dụng bài toán cắt vật liệu có thể cân nhắc chọn phương
+ án phù hợp với chiến lược của mình.
 \end_layout
 
 \begin_layout Section
