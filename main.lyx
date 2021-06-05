@@ -1325,5 +1325,146 @@ Những người tham gia đánh giá tầm quan trọng (ưu tiên) của các 
  khác nhau một cách khác nhau.
 \end_layout
 
+\begin_layout Section
+Thuật toán xấp xỉ
+\end_layout
+
+\begin_layout Standard
+Thuật toán xấp xỉ là những thuật toán với hiệu năng tốt hơn các thuật toán
+ thông thường, để tìm nghiệm 
+\emph on
+gần đúng
+\emph default
+ cho các bài toán tối ưu.
+ Những thuật toán có một đảm bảo nào đó, chứng minh được, về sai số giữa
+ nghiệm gần tối ưu và nghiệm tối ưu thực sự.
+ Những thuật toán này được thiết kế với phỏng đoán rằng 
+\begin_inset Formula $P\ne NP$
+\end_inset
+
+, i.e.
+\begin_inset space \thinspace{}
+\end_inset
+
+có một số lớp bài toán mà không thể giải được với thời gian đa thức.
+\end_layout
+
+\begin_layout Standard
+Một số cách thiết kế thuật toán xấp xỉ bao gồm:
+\end_layout
+
+\begin_layout Enumerate
+Thuật toán tham lam là dạng thuật toán mà chọn điểm tối ưu địa phương ở
+ mỗi bước.
+ E.g.
+\begin_inset space \thinspace{}
+\end_inset
+
+trong bài toán cái túi, phương pháp tham lam là lấy những vật có giá trị
+ cao và trọng lượng thấp đưa vào trước
+\end_layout
+
+\begin_layout Enumerate
+Tìm kiếm địa phương: lặp qua các phương án từ một phương án ban đầu cho
+ tới khi không tìm được phương án nào tốt hơn.
+\end_layout
+
+\begin_layout Enumerate
+Quy hoạch động: chia bài toán thành những vấn đề nhỏ hơn, và giải một cách
+ đệ quy.
+\end_layout
+
+\begin_layout Enumerate
+Giải bài toán nguyên ở dạng nới lỏng để thu được nghiệm không nguyên, sau
+ đó làm tròn một cách hợp lý.
+\end_layout
+
+\begin_layout Enumerate
+Lấy mẫu ngẫu nhiên hoặc sử dụng tính ngẫu nhiên.
+\end_layout
+
+\begin_layout Standard
+Với những thuật toán tối ưu, chúng ta có thể chứng minh được một vài tính
+ chất về nó.
+ Một thuật toán xấp xỉ được gọi là thuật toán 
+\begin_inset Formula $\rho$
+\end_inset
+
+–xấp xỉ nếu như với một đầu vào 
+\begin_inset Formula $x$
+\end_inset
+
+ thì tỉ lệ 
+\begin_inset Formula $\nicefrac{\text{giá trị}}{\text{chi phí}}$
+\end_inset
+
+ của việc xấp xỉ sẽ bé hơn (hoặc không lớn hơn) 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ Trong đó 
+\begin_inset Formula $\rho$
+\end_inset
+
+ được gọi là 
+\emph on
+giá trị đảm bảo hiệu năng tương đối
+\emph default
+.
+ Ngoài ra ta cũng có 
+\emph on
+giá trị đảm bảo hiệu năng
+\emph default
+ 
+\begin_inset Formula $R\left(x,y\right)$
+\end_inset
+
+, với phương án 
+\begin_inset Formula $y$
+\end_inset
+
+ của đầu vào 
+\begin_inset Formula $x$
+\end_inset
+
+, giá trị 
+\begin_inset Formula $R\left(x,y\right)\ge1$
+\end_inset
+
+, dấu bằng xảy ra khi mà nghiệm xấp xỉ chính là nghiệm tối ưu.
+ Một số bài toán được chứng minh lý thuyết rằng không có thuật toán xấp
+ xỉ 
+\begin_inset Formula $\rho$
+\end_inset
+
+ với một số giá trị nhất định.
+ Ví dụ với bài toán người đi du lịch, nếu ta có một thuật toán xấp xỉ, giá
+ trị 
+\begin_inset Formula $\rho$
+\end_inset
+
+ của nó sẽ nằm trong khoảng 
+\begin_inset Formula $1.008196$
+\end_inset
+
+ và 
+\begin_inset Formula $1.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Không phải thuật toán xấp xỉ nào cũng dùng được trong thực tế.
+ Ngoài những vấn đề như việc cái đặt phức tạp, thuật toán chỉ cải thiện
+ thời gian tính toán trên những đầu vào mà không thực tế, thuật toán khó
+ cài đặt\SpecialChar ldots
+ còn có cả vấn đề về sự chính xác.
+ Đôi lúc nghiệm đưa ra bởi thuật toán xấp xỉ không phù hợp với độ chính
+ xác mà bài toán quyết định yêu cầu trong thực tế.
+ Trong thực tế, những thuật toán xấp xỉ dạng PTAS thường được dùng.
+\end_layout
+
 \end_body
 \end_document
