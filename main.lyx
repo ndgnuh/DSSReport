@@ -7,8 +7,12 @@
 \textclass scrreprt
 \begin_preamble
 \usepackage{siunitx}
+\usepackage{indentfirst}
+\setlength{\parindent}{0.5in}
+\usepackage{calc}
+\usepackage{mlmodern}
 \end_preamble
-\options fontsize=12
+\options fontsize=13
 \use_default_options true
 \begin_modules
 theorems-ams-bytype
@@ -16,12 +20,12 @@ algorithm2e
 \end_modules
 \maintain_unincluded_children true
 \language vietnamese
-\language_package babel
+\language_package none
 \inputencoding utf8x
 \fontencoding T5
-\font_roman "default" "Latin Modern Roman"
+\font_roman "default" "Montserrat"
 \font_sans "default" "Latin Modern Sans"
-\font_typewriter "default" "Latin Modern Mono"
+\font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
@@ -88,7 +92,7 @@ algorithm2e
 \headsep 1in
 \footskip 1cm
 \secnumdepth 2
-\tocdepth 2
+\tocdepth 1
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
@@ -98,7 +102,7 @@ algorithm2e
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\bullet 0 0 24 -1
+\bullet 0 0 0 -1
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -108,12 +112,260 @@ algorithm2e
 
 \begin_body
 
-\begin_layout Title
-Báo cáo hệ hỗ trợ quyết định
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\backslash
+setlength{
+\backslash
+parindent}{0pt}
 \end_layout
 
-\begin_layout Subtitle
-Phân tích tối ưu
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+logowidth}{3.5em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[c]{
+\backslash
+logowidth}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includegraphics[width=0.9
+\backslash
+columnwidth]{logo}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[c]{0.5em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[c]{
+\backslash
+textwidth - 
+\backslash
+logowidth - 0.5em}
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+fontsize{21}{21}
+\backslash
+selectfont{}TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI}
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+fontsize{16}{18}
+\backslash
+selectfont{}VIỆN TOÁN ỨNG DỤNG VÀ TIN HỌC}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+fontsize{18}{30}
+\backslash
+selectfont{}BÁO CÁO HỆ HỖ TRỢ QUYẾT ĐỊNH}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+fontsize{42}{42}
+\backslash
+selectfont{}PHÂN TÍCH TỐI ƯU}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fontsize{18}{18}
+\backslash
+selectfont{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace*{4em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{llr}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textit{Nhóm 8} & Nguyễn Đức Vượng & 20173603 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+& Nguyễn Đức Hùng & 20173520
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\backslash
+fontsize{18}{18}
+\backslash
+selectfont{} Hà Nội, 2021}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0.5in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -123,12 +375,68 @@ LatexCommand tableofcontents
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\met}{\si{m}}
 {\text{m}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Lời nói đầu
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Lời nói đầu}
+\end_layout
+
 \end_inset
 
 
@@ -237,13 +545,6 @@ Quy hoạch tuyến tính (QHTT) là công cụ nổi tiếng nhất trong họ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 Xét một ví dụ thực tế như sau:
 \end_layout
 
@@ -257,13 +558,6 @@ Unimow sản xuất hai loại động cơ máy cắt cỏ James và Roker.
  Trong một tháng bất kỳ, có 120.000 giờ nhân công có sẵn, thời gian phay
  120.000 giờ và công suất tiện 150.000 giờ.
  Làm sao công ty có thể tối đa hóa lợi nhuận?
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -336,12 +630,14 @@ dụ này,
 \series bold
 
 \begin_inset Formula 
-\begin{align*}
-\text{lao động\,\,\,\,\,}3J+2R & \le120\\
-\text{phay\,\,\,\,\,\,\,\,}3J+1.5R & \le120\\
-\text{tiện\,\,\,\,\,\,\,\,\,\,\,\,}2J+4R & \le150\\
-J,R\ge0
-\end{align*}
+\[
+\begin{array}{rrcrcl}
+\text{lao động} & 3J & + & 2R & \le & 120\\
+\text{phay} & 3J & + & 1.5R & \le & 120\\
+\text{tiện} & 2J & + & 4R & \le & 150\\
+ &  &  & \mathllap{J,R} & \ge & 0
+\end{array}
+\]
 
 \end_inset
 
@@ -355,7 +651,15 @@ Có bốn phương pháp để giải quyết vấn đề:
 \begin_layout Enumerate
 
 \series bold
-Mô hình "What if?"
+Mô hình 
+\begin_inset Quotes eld
+\end_inset
+
+What if?
+\begin_inset Quotes erd
+\end_inset
+
+
 \series default
 , sử dụng phần mềm Microsoft Excel Solver.
  Mô hình này có thể rất mạnh mẽ và đơn giản để xây dựng nhưng dựa vào quyết
@@ -451,6 +755,9 @@ là các ràng buộc thể hiện những điều kiện thực tế không đi
  như công nghệ, tài chính, nhân lực, etc.
  Một cách lý thuyết, những bài toán quy hoạch nguyên dưới dạng này luôn
  có nghiệm.
+ Bài toán quy hoạch nguyên có một số phương pháp giải như nhánh cận, hình
+ học\SpecialChar ldots
+
 \end_layout
 
 \begin_layout Example
@@ -1904,8 +2211,7 @@ Lấy mẫu ngẫu nhiên hoặc sử dụng tính ngẫu nhiên.
 \end_layout
 
 \begin_layout Standard
-Với những thuật toán tối ưu, chúng ta có thể chứng minh được một vài tính
- chất về nó.
+Chúng ta có thể chứng minh được một vài tính chất về thuật toán xấp xỉ.
  Một thuật toán xấp xỉ được gọi là thuật toán 
 \begin_inset Formula $\rho$
 \end_inset
@@ -1932,7 +2238,7 @@ Với những thuật toán tối ưu, chúng ta có thể chứng minh được
 giá trị đảm bảo hiệu năng tương đối
 \emph default
 .
- Ngoài ra ta cũng có 
+ Ngoài ra ta có 
 \emph on
 giá trị đảm bảo hiệu năng
 \emph default
@@ -1948,7 +2254,7 @@ giá trị đảm bảo hiệu năng
 \begin_inset Formula $x$
 \end_inset
 
-, giá trị 
+, 
 \begin_inset Formula $R\left(x,y\right)\ge1$
 \end_inset
 
@@ -1978,12 +2284,11 @@ giá trị đảm bảo hiệu năng
 \begin_layout Standard
 Không phải thuật toán xấp xỉ nào cũng dùng được trong thực tế.
  Ngoài những vấn đề như việc cái đặt phức tạp, thuật toán chỉ cải thiện
- thời gian tính toán trên những đầu vào mà không thực tế, thuật toán khó
- cài đặt\SpecialChar ldots
- còn có cả vấn đề về sự chính xác.
- Đôi lúc nghiệm đưa ra bởi thuật toán xấp xỉ không phù hợp với độ chính
- xác mà bài toán quyết định yêu cầu trong thực tế.
- Trong thực tế, những thuật toán xấp xỉ dạng PTAS thường được dùng.
+ không thực tiễn\SpecialChar ldots
+ còn có cả vấn đề về sự chính xác, nghiệm xấp xỉ không có
+ độ chính xác về số mà bài toán quyết định yêu cầu.
+ Trong thực tế, những thuật toán xấp xỉ thường được sử dụng là những thuật
+ toán xấp xỉ dạng PTAS.
 \end_layout
 
 \begin_layout Chapter
